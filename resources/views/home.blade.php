@@ -1,0 +1,92 @@
+@extends('layouts.app-home')
+
+@section('content')
+
+    <div class="rounded pt-4 bg-grey-lightest">
+        <div class="container-inner">
+            <div class="d-flex justify-content-between pt-5 pb-5">
+                <div class="pr-4">
+                    <h2>What is NanoCenter?</h2>
+                    <p>The Nano Center is a community of individuals with varying skillsets and competence areas from around the globe.
+                        All with a common goal of making cryptocurrency an actual currency.</p>
+                </div>
+                <div><a href="#" class="btn btn-light-blue">Join the Community</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-inner">
+
+        <div class="d-flex">
+            <div>
+                <h2 class="text-center">Most Popular Community Projects</h2>
+            </div>
+            <div><a href="#">View All</a></div>
+        </div>
+
+    </div>
+
+    <div class="container-inner">
+        <div class="project-slider">
+            <div class="project-slider__wrap">
+                <?php for ($i = 0; $i < 5; $i++) { ?>
+                <div class="project-slider__cell">
+                    <div class="project-card">
+                        <div class="project-card__background" style="background-image: url('/img/project-background.png');"></div>
+                        <div class="project-card__content">
+                            <h4>Nano Promotional Video</h4>
+                            <p>
+                                A promotional video that will be crowdfunded by the
+                                NanoCenter team and the Nano Community.
+                                <?php if($i == 2) { ?>
+                                Slightly longer content.
+                                <?php } ?>
+                            </p>
+                            <div class="project-card__footer">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="project-card__support">
+                                    <div class="project-card__support__numbers">
+                                        <span class="project-card__support__current">800</span>/1000
+                                    </div>
+                                    <a href="">Support this project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?php } ?>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-inner">
+        <div class="callout bg-blue px-lg-5 py-lg-5 py-4 px-2 rounded text-white">
+            <div class="px-3 px-lg-4">
+                <div class="text-center pt-3 pb-4"><span class="icon-white"><?php echo file_get_contents(public_path('/img/nano-icon-white.svg')); ?></span></div>
+                <h3 class="text-center pb-2">What is Nano?</h3>
+                <p class="text-center pb-4" style="opacity: .75">Launched in 2015 by Colin LeMahieu as RaiBlocks, Nano is a low-latency payment platform that requires minimal resources; making Nano ideal for peer-to-peer transactions</p>
+                <hr/>
+            </div>
+            <div class="d-md-flex mx-lg--5">
+                <div class="py-3 py-md-4 py-lg-5 px-3 px-lg-4">
+                    <h3 class="h4">Instant Transactions</h3>
+                    <p style="opacity: .75">Nano transactions happen immediately, so
+                        it's a currency you can use every day for
+                        purchases large or small.</p>
+                </div>
+                <div class="py-3 py-md-4 py-lg-5 px-3 px-lg-4">
+                    <h3 class="h4">Zero Fees</h3>
+                    <p style="opacity: .75">Pay for the purchase, not the privilege – zero fees on whatever you buy, from bus ticket to business class flight.</p>
+                </div>
+                <div class="py-3 py-md-4 py-lg-5 px-3 px-lg-4">
+                    <h3 class="h4">Infinitely scalable</h3>
+                    <p style="opacity: .75">Nano can process over 1000x more transactions per second than Bitcoin, so you'll never get stuck in a queue.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+@endsection

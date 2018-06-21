@@ -1,0 +1,80 @@
+.project-slider {
+
+    // these are just temp - please change
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    &__wrap {
+      
+          display: flex;
+          align-items: stretch;
+          padding-top: rem(10);
+          padding-bottom: rem(10);
+          opacity: 0;
+          margin: 0 -23px;
+      
+          &.flickity-enabled {
+      
+            opacity: 1;
+      
+            .project-slider__cell {
+                min-height: 100%;
+                align-self: stretch;
+            }
+          }
+
+    }
+
+    &__cell {
+        display: flex;
+        width: 80%;
+        min-width: 80%;
+        @include media-breakpoint-up(md) {
+            width: 50%;
+            min-width: 50%;
+        }
+        @include media-breakpoint-up(lg) {
+            width: 33.333%;
+            min-width: 33.333%;
+        }
+        padding: 0 23px;
+    }
+
+    .flickity-viewport {
+        width: 100%;
+        overflow: visible;
+
+        &:after,
+        &:before {
+            // white overlay for when out of container
+            position: absolute;
+            display: block;
+            content: '';
+            background-color: rgba($body-bg, 0.75);
+            top: 0;
+            height: 100%;
+            width: 50vw;
+        }
+
+        &:after {
+            background: linear-gradient( to right, rgba($body-bg, 0) 0px, rgba($body-bg, 0.75) 20px);
+            left: 100%;
+        }
+        &:before {
+            background: linear-gradient( to left, rgba($body-bg, 0) 0px, rgba($body-bg, 0.75) 20px);
+            right: 100%;
+            z-index: 1;
+        }
+    }
+    .flickity-slider {
+        display: flex;
+        align-items: stretch;
+    }
+}
+
+// we need this to stop the horizontal scroll bar from the projects slider
+// is this ok @killrizzy , otherwise we need a way to break out to the .container
+// and set .project-slider to 100vw with overflow hidden
+main {
+    overflow: hidden;
+}

@@ -1,0 +1,43 @@
+// Colors
+$blue: #3054F4;
+$lightblue: #668DFF;
+$primary: $blue;
+$gray-lightest: #FCFCFF;
+$medium-gray: #999999;
+
+$theme-colors: (
+  "blue": $blue,
+  "light-blue": $lightblue
+);
+
+$container-max-widths: (
+  'xl': 1360px
+);
+
+
+// Body
+$body-bg: $gray-lightest;
+
+// Navbar
+$navbar-height:105px;
+$navbar-active-border-color:#8196d3;
+
+// Typography
+$font-family-sans-serif: "acumin-pro", sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+$headings-font-weight: 600;
+
+// Buttons
+$btn-border-radius:1.1rem;
+
+// Progress bars
+
+$progress-height:                   5px;
+// $progress-bg:                       $gray-200 !default;
+$progress-border-radius:            3.5px 0 0 3.5px;
+// $progress-box-shadow:               inset 0 .1rem .1rem rgba($black, .1) !default;
+// $progress-bar-color:                $white !default;
+$progress-bar-bg:                   $lightblue;
+// $progress-bar-animation-timing:     1s linear infinite !default;
+// $progress-bar-transition:           width .6s ease !default;

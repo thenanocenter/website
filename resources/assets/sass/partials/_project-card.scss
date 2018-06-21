@@ -1,0 +1,94 @@
+.project-card {
+
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    width: 100%;
+    border-radius: 8px;
+    overflow:hidden;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+
+    &__background {
+        // background-image: url('img/project-background.png');
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 0;
+        padding-bottom: 62%; // fixed ratio
+
+        &:after {
+            position: absolute;
+            display: block;
+            content: '';
+            background-image: url('/img/nano-icon-white.svg');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            top: 50%;
+            left: 50%;
+            height: 20%;
+            width: 25%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;  
+        padding: 30px;
+
+
+        p {
+            color: $medium-gray;
+            font-weight: 500;
+        }
+
+        
+    }
+
+    &__footer {
+        margin-top: auto;
+        font-size: 14px;
+        font-weight: 500;
+
+        .progress {
+            margin-bottom: 16px;
+        }
+
+    }
+
+    &__support {
+        display: flex;
+        justify-content: space-between;
+        color: $medium-gray;
+
+        &__numbers {
+          position: relative;
+          padding-left: 30px;
+
+          &:before {
+              position: absolute;
+              display: block;
+              content: '';
+              left: 0;
+              width: 24px;
+              height: 10px;
+              background-image: url('/img/nano-icon-blue.svg');
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
+              top: 50%;
+              transform: translateY(-50%);
+          }
+        }
+
+        &__current, a {
+            color: $lightblue;
+        }
+    }
+
+
+
+}

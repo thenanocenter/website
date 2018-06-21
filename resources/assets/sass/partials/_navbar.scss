@@ -1,0 +1,107 @@
+.navbar{
+
+}
+
+.navbar-brand{
+  width: 200px;
+  svg{
+      //background-color: #FFFFFF;
+      width: 35px;
+      height: 35px;
+  }
+}
+
+.navbar-dark{
+  border-bottom:solid 1px rgba(255,255,255,0.25);
+  padding-top:0px;
+  padding-bottom:0px;
+  .navbar-nav{
+    .nav-item{
+      .nav-link{
+        color:#FFFFFF;
+        font-size:16px;
+        font-weight:500;
+        height: $navbar-height;
+        line-height: $navbar-height;
+        padding-top:0px;
+        padding-bottom:0px;
+        padding-left:18px;
+        padding-right:18px;
+        &:hover{
+          color:#FFFFFF;
+        }
+      }
+      &.active{
+        border-bottom:solid 1px $navbar-active-border-color;
+        margin-bottom:-1px;
+      }
+    }
+  }
+}
+
+.navbar-nav-right{
+  width: 200px;
+}
+
+.navbar-dark{
+  .navbar-admin{
+    z-index: 100;
+    position: absolute;
+    bottom: -30px;
+    right: 5px;
+    .nav-item{
+      padding-right:1px;
+      padding-left:1px;
+      .nav-link{
+        background-color: rgba(0,0,0,0.5);
+        border-radius:10px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        color:#FFFFFF;
+        font-size:12px;
+        text-transform: uppercase;
+        font-weight:500;
+        height: 30px;
+        line-height: 30px;
+        padding-top:0px;
+        padding-bottom:0px;
+        padding-left:10px;
+        padding-right:10px;
+        &:hover{
+          color:#FFFFFF;
+          background-color: rgba(0,0,0,0.7);
+        }
+      }
+      &.active{
+        border:none;
+        margin-bottom:0px;
+      }
+    }
+  }
+}
+
+/*.navbar-light{
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  .navbar-nav{
+    .nav-link{
+      color:#4a90e2;
+      border-radius:10px;
+      font-weight:500;
+      font-size:13px;
+      text-transform: uppercase;
+      padding-left:0.9rem;
+      padding-right:0.9rem;
+      &:hover{
+        background-color:#4a90e2;
+        color:#FFF;
+      }
+    }
+  }
+}
+
+.navbar-brand{
+  img{
+    height:32px;
+  }
+}*/
