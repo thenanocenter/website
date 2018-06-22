@@ -26,7 +26,7 @@
 
     </div>
 
-    <div class="container-inner">
+    <div class="container-inner" style="min-height: 450px;">
         <div class="project-slider">
             <div class="project-slider__wrap">
                 @foreach($projects as $project)
