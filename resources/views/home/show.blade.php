@@ -29,34 +29,9 @@
     <div class="container-inner">
         <div class="project-slider">
             <div class="project-slider__wrap">
-                <?php for ($i = 0; $i < 5; $i++) { ?>
-                <div class="project-slider__cell">
-                    <div class="project-card">
-                        <div class="project-card__background" style="background-image: url('/img/project-background.png');"></div>
-                        <div class="project-card__content">
-                            <h4>Nano Promotional Video</h4>
-                            <p>
-                                A promotional video that will be crowdfunded by the
-                                NanoCenter team and the Nano Community.
-                                <?php if($i == 2) { ?>
-                                Slightly longer content.
-                                <?php } ?>
-                            </p>
-                            <div class="project-card__footer">
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div class="project-card__support">
-                                    <div class="project-card__support__numbers">
-                                        <span class="project-card__support__current">800</span>/1000
-                                    </div>
-                                    <a href="">Support this project</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <?php } ?>
+                @foreach($projects as $project)
+                    @include('components.projects.slider-cell',['project' => $project])
+                @endforeach
             </div>
         </div>
     </div>

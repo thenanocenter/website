@@ -2,8 +2,8 @@
 
 Auth::routes();
 
-Route::get('/', function(){
-    return view('home');
+Route::namespace('Home')->prefix('/')->group(function(){
+    Route::get('/', 'HomeController@show');
 });
 
 Route::get('/about', function(){

@@ -36,6 +36,10 @@ class Project extends Model
         return 0;
     }
 
+    public function getNanoGoalPercent(){
+        return intval($this->getNanoCurrent() / $this->nano_goal);
+    }
+
     public static function findByKey($key){
         $project = static::findByUuid($key);
         if($project){
