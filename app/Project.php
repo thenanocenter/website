@@ -15,6 +15,7 @@ class Project extends Model
         'slug',
         'name',
         'image_path',
+        'description_short',
         'description',
         'nano_goal',
         'nano_address',
