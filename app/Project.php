@@ -43,4 +43,10 @@ class Project extends Model
         return static::where('slug',$key)->first();
     }
 
+    public function replaceImage($image){
+        $storeResult = $image->store('projects', 'public');
+        $this->image_path = $storeResult;
+        $this->save();
+    }
+
 }

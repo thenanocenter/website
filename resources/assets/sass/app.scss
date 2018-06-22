@@ -18,6 +18,9 @@
 @import 'partials/project-slider';
 @import 'partials/project-card';
 
+input[type="file"]{
+  display: block;
+}
 
 h2{
   font-size:26px;

@@ -16,7 +16,7 @@
             @slot('action')
                 @include('components.delete-button',['url'=>url($baseRoute.'/'.$project->id)])
             @endslot
-            {!! Former::open_vertical($baseRoute.'/'.$project->id)->method('PATCH') !!}
+            {!! Former::open_vertical_for_files($baseRoute.'/'.$project->id)->method('PATCH') !!}
             {!! Former::populate($project) !!}
             @include('manage.project.partials.fields',['update'=>true])
             <button type="submit" class="btn btn-primary">Save</button>

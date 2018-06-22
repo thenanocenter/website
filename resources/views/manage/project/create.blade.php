@@ -12,7 +12,7 @@
         ])
 
         @component('components.panel',['title'=>'New '.$baseTitleSingular])
-            {!! Former::open_vertical($baseRoute)->method('POST') !!}
+            {!! Former::open_vertical_for_files($baseRoute)->method('POST') !!}
             @include('manage.project.partials.fields',['update'=>false])
             <button type="submit" class="btn btn-primary">Save</button>
             {!! Former::close() !!}

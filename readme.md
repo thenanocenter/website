@@ -8,6 +8,7 @@ Laravel 5.6
 composer install
 cp .env.example .env
 php artisan key:generate
+php artisan storage:link
 ```
 
 Fill out your database information in .env then run the database migrations

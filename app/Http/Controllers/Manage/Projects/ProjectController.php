@@ -19,4 +19,23 @@ class ProjectController extends BaseManageController
     protected $viewEdit='manage.project.edit';
     protected $viewFields;
 
+    public function store(Request $request){
+        $modelClass = $this->modelClass;
+        $model = $modelClass::create($request->all());
+        if($request->hasfile('image_file')) {
+            $model->replaceImage($request->image_file);
+        }
+        return redirect($this->baseRoute)->withSuccess('Saved!');
+    }
+
+    public function update(Request $request, $modelId){
+        $modelClass = $this->modelClass;
+        $model = $modelClass::where('id',$modelId)->first();
+        $model->update($request->all());
+        if($request->hasfile('image_file')) {
+            $model->replaceImage($request->image_file);
+        }
+        return redirect($this->redirectAfterUpdate($model))->withSuccess('Saved!');
+    }
+
 }
