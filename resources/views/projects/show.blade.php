@@ -23,7 +23,7 @@
         <h3>Support This Project:</h3>
         @include('brainblocks::button',[
                   'destination'=>$project->nano_address,
-                  'amount'=>\NanoUnits::convert('ticker','nano',$project->nano_goal),
+                  'amount'=>\NanoUnits::convert('ticker','nano',1),
                   'action'=>url($project->getPath().'/payment')
               ])
     </div>
