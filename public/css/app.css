@@ -10876,13 +10876,108 @@ https://flickity.metafizzy.co
   opacity: 1;
 }
 
-.navbar-brand {
-  width: 200px;
+.navbar .container-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  position: relative;
 }
 
-.navbar-brand svg {
+.navbar .container-inner .branding-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navbar .container-inner .branding-bar .navbar-brand {
+  width: 200px;
+  padding: 10px 0px;
+}
+
+.navbar .container-inner .branding-bar .navbar-brand svg {
   width: 35px;
   height: 35px;
+}
+
+.navbar .container-inner .branding-bar .navbar-toggler {
+  margin-top: 10px;
+  height: 35px;
+  width: 35px;
+  padding: 0px;
+  text-align: center;
+  border-radius: 2px;
+  border: solid 1px #FFF;
+  color: #FFF;
+}
+
+.navbar .container-inner .navbar-collapse .collapse-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.navbar .container-inner .navbar-collapse .collapse-inner .navbar-nav {
+  width: 100%;
+}
+
+.navbar .container-inner .navbar-collapse .collapse-inner .navbar-nav .nav-item > a {
+  height: 50px;
+  line-height: 50px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+@media (min-width: 768px) {
+  .navbar .container-inner {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-left: 76px;
+    padding-right: 76px;
+  }
+
+  .navbar .container-inner .navbar-collapse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .navbar .container-inner .navbar-collapse .navbar-nav {
+    width: auto;
+  }
+
+  .navbar .container-inner .navbar-collapse .navbar-nav .nav-item > a {
+    height: 105px;
+    line-height: 105px;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
 }
 
 .navbar-dark {
@@ -10901,15 +10996,12 @@ https://flickity.metafizzy.co
   padding-bottom: 0px;
   padding-left: 18px;
   padding-right: 18px;
+  margin-bottom: -1px;
 }
 
 .navbar-dark .navbar-nav .nav-item .nav-link:hover {
+  border-bottom: solid 1px #8ca9ff;
   color: #FFFFFF;
-}
-
-.navbar-dark .navbar-nav .nav-item.active {
-  border-bottom: solid 1px #8196d3;
-  margin-bottom: -1px;
 }
 
 .navbar-nav-right {
@@ -10954,32 +11046,6 @@ https://flickity.metafizzy.co
   border: none;
   margin-bottom: 0px;
 }
-
-/*.navbar-light{
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-  .navbar-nav{
-    .nav-link{
-      color:#4a90e2;
-      border-radius:10px;
-      font-weight:500;
-      font-size:13px;
-      text-transform: uppercase;
-      padding-left:0.9rem;
-      padding-right:0.9rem;
-      &:hover{
-        background-color:#4a90e2;
-        color:#FFF;
-      }
-    }
-  }
-}
-
-.navbar-brand{
-  img{
-    height:32px;
-  }
-}*/
 
 .footer {
   background-color: #FFFFFF;
@@ -11247,12 +11313,6 @@ hr {
 
 .bg-grey-lightest {
   background-color: #FCFCFF;
-}
-
-.container-inner {
-  padding-left: 76px;
-  padding-right: 76px;
-  position: relative;
 }
 
 .card .card-title a {
