@@ -11048,7 +11048,7 @@ https://flickity.metafizzy.co
 .footer {
   background-color: #FFFFFF;
   border: 1px solid #D6D6D6;
-  color: #666666;
+  color: #999999;
   font-size: 16px;
 }
 
@@ -11057,7 +11057,7 @@ https://flickity.metafizzy.co
 }
 
 .footer a {
-  color: #666666;
+  color: #999999;
 }
 
 .footer .logo {
@@ -11070,11 +11070,11 @@ https://flickity.metafizzy.co
 }
 
 .footer .icon-grey svg {
-  fill: #666666;
+  fill: #999999;
 }
 
 .footer .icon-grey svg path {
-  fill: #666666;
+  fill: #999999;
 }
 
 .embed-container {

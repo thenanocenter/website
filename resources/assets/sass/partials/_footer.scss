@@ -1,13 +1,13 @@
 .footer{
   background-color: #FFFFFF;
   border: 1px solid #D6D6D6;
-  color: #666666;
+  color: #999999;
   font-size:16px;
   .footer-inner{
     height: 85px;
   }
   a{
-    color:#666666;
+    color:#999999;
   }
   .logo{
     display: block;
@@ -18,9 +18,9 @@
   }
   .icon-grey{
     svg{
-      fill: #666666;
+      fill: #999999;
       path{
-        fill: #666666;
+        fill: #999999;
       }
     }
   }
