@@ -1,5 +1,5 @@
 .project-card {
-
+    background-color: #FFF;
     display: flex;
     flex-direction: column;
     margin-bottom: 16px;
@@ -7,7 +7,6 @@
     border-radius: 8px;
     overflow:hidden;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
-
     &__background {
         // background-image: url('img/project-background.png');
         position: relative;
@@ -18,6 +17,7 @@
         padding-bottom: 62%; // fixed ratio
 
         &:after {
+            /*
             position: absolute;
             display: block;
             content: '';
@@ -29,7 +29,7 @@
             left: 50%;
             height: 20%;
             width: 25%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);*/
         }
     }
 
@@ -39,7 +39,11 @@
         flex: 1;  
         padding: 30px;
 
-
+        h4{
+            a{
+                color: $black;
+            }
+        }
         p {
             color: $medium-gray;
             font-weight: 500;
