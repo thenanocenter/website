@@ -10954,8 +10954,6 @@ https://flickity.metafizzy.co
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding-left: 76px;
-    padding-right: 76px;
   }
 
   .navbar .container-inner .navbar-collapse .collapse-inner {
@@ -11309,6 +11307,13 @@ hr {
   height: 1px;
   border: none;
   margin: 15px 0px;
+}
+
+@media (min-width: 768px) {
+  .container-inner {
+    padding-left: 76px;
+    padding-right: 76px;
+  }
 }
 
 .bg-grey-lightest {

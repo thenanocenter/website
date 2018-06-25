@@ -35,6 +35,13 @@ hr{
   margin:15px 0px;
 }
 
+.container-inner{
+  @media (min-width: 768px) {
+    padding-left:76px;
+    padding-right:76px;
+  }
+}
+
 .bg-grey-lightest{
   background-color: $gray-lightest;
 }
