@@ -188,7 +188,7 @@ a {
 
 a:hover {
   color: #0b2ecd;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a:not([href]):not([tabindex]) {
@@ -3679,14 +3679,14 @@ fieldset:disabled a.btn {
 
 .btn-link:hover {
   color: #0b2ecd;
-  text-decoration: underline;
+  text-decoration: none;
   background-color: transparent;
   border-color: transparent;
 }
 
 .btn-link:focus,
 .btn-link.focus {
-  text-decoration: underline;
+  text-decoration: none;
   border-color: transparent;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -11412,5 +11412,13 @@ hr {
 .btn-group-lg > .btn {
   font-size: 15px;
   padding: 10px 40px;
+}
+
+.icon-brand svg {
+  fill: #3054F4;
+}
+
+.icon-brand svg * {
+  fill: #3054F4;
 }
 

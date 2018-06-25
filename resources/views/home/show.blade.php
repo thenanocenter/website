@@ -20,11 +20,11 @@
 
     <div class="container-inner">
 
-        <div class="d-flex">
-            <div>
+        <div class="d-flex justify-content-center">
+            <div class="flex-grow-1">
                 <h2 class="text-center">Most Popular Community Projects</h2>
             </div>
-            <div><a href="#">View All</a></div>
+            <div><a href="{{ url('/projects') }}">View All <span class="icon-brand pl-2"><?php echo file_get_contents(public_path('/img/arrow-right-white.svg')); ?></span></a></div>
         </div>
 
     </div>

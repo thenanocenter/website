@@ -125,3 +125,12 @@ hr{
   font-size:15px;
   padding:10px 40px;
 }
+
+.icon-brand{
+  svg{
+    fill:$blue;
+    *{
+      fill:$blue;
+    }
+  }
+}
