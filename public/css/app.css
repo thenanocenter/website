@@ -11389,6 +11389,7 @@ hr {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 0px auto;
   text-align: center;
   border: 2px solid #FFFFFF;
   border-radius: 100%;
@@ -11397,6 +11398,7 @@ hr {
   -webkit-box-pack: center !important;
       -ms-flex-pack: center !important;
           justify-content: center !important;
+  background-color: transparent;
 }
 
 .btn-circle:hover {

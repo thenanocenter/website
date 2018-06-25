@@ -1,29 +1,13 @@
-
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
-
 require('./bootstrap');
 
 window.Vue = require('vue');
-
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-
 Vue.component('confirmation-form', require('./components/ConfirmationForm.vue'));
 Vue.component('notification', require('./components/Notification.vue'));
-
 const app = new Vue({
     el: '#app'
 });
 
 var Flickity = require('flickity');
-
 var flickityElement = document.querySelector('.project-slider__wrap');
 if(flickityElement !== null){
     var flickityInstance = new Flickity(flickityElement, {
@@ -34,3 +18,20 @@ if(flickityElement !== null){
         groupCells: true
     });
 }
+
+$( document ).ready(function() {
+    //Embed Video Modals
+    $("body").on('shown.bs.modal', function (e) {
+        var $iframes = $(e.target).find("iframe");
+        $iframes.each(function(index, iframe){
+            var autoplaySrc = $(iframe).data('autoplay-src');
+            $(iframe).attr("src", autoplaySrc);
+        });
+    });
+    $("body").on('hidden.bs.modal', function (e) {
+        var $iframes = $(e.target).find("iframe");
+        $iframes.each(function(index, iframe){
+            $(iframe).removeAttr("src");
+        });
+    });
+});
