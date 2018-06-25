@@ -6,8 +6,8 @@ Route::namespace('Home')->prefix('/')->group(function(){
     Route::get('/', 'HomeController@show');
 });
 
-Route::get('/about', function(){
-    return view('about');
+Route::namespace('About')->prefix('/about')->group(function(){
+    Route::get('/', 'AboutController@show');
 });
 
 Route::namespace('Projects')->prefix('/projects')->group(function(){
