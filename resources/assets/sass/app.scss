@@ -46,6 +46,10 @@ hr{
   background-color: $gray-lightest;
 }
 
+.text-grey{
+  color: #999999;
+}
+
 .card{
   .card-title{
     a{
@@ -115,4 +119,9 @@ hr{
     width: 19px;
     height: 25px;
   }
+}
+
+.btn-lg{
+  font-size:15px;
+  padding:10px 40px;
 }

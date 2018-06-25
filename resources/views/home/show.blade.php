@@ -2,16 +2,19 @@
 
 @section('content')
 
-    <div class="rounded pt-4 bg-grey-lightest">
-        <div class="container-inner">
-            <div class="d-flex justify-content-between pt-5 pb-5">
-                <div class="pr-4">
+    <div class="rounded pt-1 bg-grey-lightest">
+        <div class="container-inner pb-5">
+            <div class="row pt-5 pb-3">
+                <div class="col-sm-9">
                     <h2>What is NanoCenter?</h2>
-                    <p>The Nano Center is a community of individuals with varying skillsets and competence areas from around the globe.
-                        All with a common goal of making cryptocurrency an actual currency.</p>
+                    <p class="text-grey">The Nano Center is a community of individuals with varying skillsets and competence areas from around the globe.
+                        <br/>All with a common goal of making cryptocurrency an actual currency.</p>
                 </div>
-                <div><a href="#" class="btn btn-light-blue">Join the Community</a></div>
+                <div class="col-sm-3 text-right py-4">
+                    <a href="#" class="btn btn-light-blue btn-lg">Join the Community</a>
+                </div>
             </div>
+            <hr/>
         </div>
     </div>
 
