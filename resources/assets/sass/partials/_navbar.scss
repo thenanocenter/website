@@ -62,10 +62,10 @@
           width: auto;
           .nav-item{
             > a{
-              height: $navbar-height;
-              line-height: $navbar-height;
-              padding-left:18px;
-              padding-right:18px;
+              height: $navbar-height !important;
+              line-height: $navbar-height !important;
+              padding-left:18px !important;
+              padding-right:18px !important;
             }
           }
         }
