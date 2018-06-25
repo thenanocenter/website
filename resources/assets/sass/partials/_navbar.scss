@@ -56,16 +56,18 @@
       padding-left:76px;
       padding-right:76px;
       .navbar-collapse{
-        flex-direction: row;
-        justify-content: center;
-        .navbar-nav{
-          width: auto;
-          .nav-item{
-            > a{
-              height: $navbar-height !important;
-              line-height: $navbar-height !important;
-              padding-left:18px !important;
-              padding-right:18px !important;
+        .collapse-inner{
+          flex-direction: row;
+          justify-content: center;
+          .navbar-nav{
+            width: auto;
+            .nav-item{
+              > a{
+                height: $navbar-height;
+                line-height: $navbar-height;
+                padding-left:18px;
+                padding-right:18px;
+              }
             }
           }
         }

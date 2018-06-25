@@ -10958,7 +10958,7 @@ https://flickity.metafizzy.co
     padding-right: 76px;
   }
 
-  .navbar .container-inner .navbar-collapse {
+  .navbar .container-inner .navbar-collapse .collapse-inner {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -10968,15 +10968,15 @@ https://flickity.metafizzy.co
             justify-content: center;
   }
 
-  .navbar .container-inner .navbar-collapse .navbar-nav {
+  .navbar .container-inner .navbar-collapse .collapse-inner .navbar-nav {
     width: auto;
   }
 
-  .navbar .container-inner .navbar-collapse .navbar-nav .nav-item > a {
-    height: 105px !important;
-    line-height: 105px !important;
-    padding-left: 18px !important;
-    padding-right: 18px !important;
+  .navbar .container-inner .navbar-collapse .collapse-inner .navbar-nav .nav-item > a {
+    height: 105px;
+    line-height: 105px;
+    padding-left: 18px;
+    padding-right: 18px;
   }
 }
 
