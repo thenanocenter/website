@@ -1,6 +1,5 @@
-
 // Fonts
-// acumin-pro is loaded via typekit - fontwesights 400 500 and 600 are available
+// acumin-pro is loaded via typekit - font weights 400 500 and 600 are available
 
 // Variables
 @import "variables";
@@ -13,7 +12,9 @@
 
 // Partials
 @import 'partials/navbar';
+@import 'partials/banner';
 @import 'partials/footer';
+@import 'partials/buttons';
 @import 'partials/embedresponsively';
 @import 'partials/project-slider';
 @import 'partials/project-card';
@@ -70,62 +71,6 @@ hr{
 
 .main-container{
   flex: 1;
-}
-
-.banner-navbar-container{
-  background-color:#333;
-  height:875px;
-  background-image:url('/img/banner-a.png');
-  background-size:cover;
-  background-repeat: no-repeat;
-  background-position:center;
-}
-
-.banner-container{
-  padding-top:176px;
-  h1{
-    color: #FFFFFF;
-    font-size: 48px;
-    font-weight: 600;
-    line-height: 60px;
-    text-align: left;
-  }
-  p{
-    color: rgba(255, 255, 255, 0.75);
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 28px;
-    text-align: left;
-  }
-}
-
-.btn-circle{
-  text-decoration:none;
-  display:flex;
-  margin:0px auto;
-  text-align:center;
-  border: 2px solid #FFFFFF;
-  border-radius: 100%;
-  width: 110px;
-  height: 110px;
-  justify-content: center !important;
-  background-color:transparent;
-  &:hover{
-    background-color: rgba(0,0,0,0.2);
-  }
-  span{
-    padding-top:3px;
-    padding-left:3px;
-    align-self: center;
-    display: block;
-    width: 19px;
-    height: 25px;
-  }
-}
-
-.btn-lg{
-  font-size:15px;
-  padding:10px 40px;
 }
 
 .icon-brand{

@@ -1,0 +1,28 @@
+.btn-circle{
+  text-decoration:none;
+  display:flex;
+  margin:0px auto;
+  text-align:center;
+  border: 2px solid #FFFFFF;
+  border-radius: 100%;
+  width: 110px;
+  height: 110px;
+  justify-content: center !important;
+  background-color:transparent;
+  &:hover{
+    background-color: rgba(0,0,0,0.2);
+  }
+  span{
+    padding-top:3px;
+    padding-left:3px;
+    align-self: center;
+    display: block;
+    width: 19px;
+    height: 25px;
+  }
+}
+
+.btn-lg{
+  font-size:15px;
+  padding:10px 40px;
+}

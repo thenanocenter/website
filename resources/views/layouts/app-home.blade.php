@@ -9,18 +9,20 @@
         <div class="banner-navbar-container">
             @include('layouts.partials.navbar')
             <div class="container">
-                <div class="banner-container container-inner d-flex justify-content-between text-white">
-                    <div class="w-75">
-                        <div class="pb-3"><span class="icon-white"><?php echo file_get_contents(public_path('/img/nano-icon-white.svg')); ?></span></div>
-                        <h1 class="w-75">The digital currency for
-                            the real world</h1>
-                        <p>The fast, environmentally friendly and free way to pay for everything.</p>
-                    </div>
-                    <div class="text-center pt-5">
-                        <button class="btn-circle mb-2" data-toggle="modal" data-target="#videoModal">
-                            <span><?php echo file_get_contents(public_path('/img/triangle-right-white.svg')); ?></span>
-                        </button>
-                        <button class="text-white btn btn-link" data-toggle="modal" data-target="#videoModal">What is Nano?</button>
+                <div class="banner-container container-inner text-white">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="pb-3"><span class="icon-white"><?php echo file_get_contents(public_path('/img/nano-icon-white.svg')); ?></span></div>
+                            <h1>The digital currency for
+                                the real world</h1>
+                            <p>The fast, environmentally friendly and free way to pay for everything.</p>
+                        </div>
+                        <div class="col-md-3 text-center pt-5">
+                            <button class="btn-circle mb-2" data-toggle="modal" data-target="#videoModal">
+                                <span><?php echo file_get_contents(public_path('/img/triangle-right-white.svg')); ?></span>
+                            </button>
+                            <button class="text-white btn btn-link" data-toggle="modal" data-target="#videoModal">What is Nano?</button>
+                        </div>
                     </div>
                 </div>
             </div>

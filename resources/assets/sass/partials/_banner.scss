@@ -1,0 +1,32 @@
+.banner-navbar-container{
+  background-color:#333;
+  height:875px;
+  background-image:url('/img/banner-a.png');
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position:center;
+}
+
+.banner-container{
+  text-align:center;
+  padding-top:50px;
+  h1{
+    color: #FFFFFF;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 60px;
+  }
+  p{
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 28px;
+  }
+  @media (min-width: 768px) {
+    padding-top:176px;
+    text-align:left;
+    h1{
+      max-width: 75%;
+    }
+  }
+}

@@ -11045,6 +11045,45 @@ https://flickity.metafizzy.co
   margin-bottom: 0px;
 }
 
+.banner-navbar-container {
+  background-color: #333;
+  height: 875px;
+  background-image: url("/img/banner-a.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.banner-container {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.banner-container h1 {
+  color: #FFFFFF;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 60px;
+}
+
+.banner-container p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+@media (min-width: 768px) {
+  .banner-container {
+    padding-top: 176px;
+    text-align: left;
+  }
+
+  .banner-container h1 {
+    max-width: 75%;
+  }
+}
+
 .footer {
   background-color: #FFFFFF;
   border: 1px solid #D6D6D6;
@@ -11075,6 +11114,43 @@ https://flickity.metafizzy.co
 
 .footer .icon-grey svg path {
   fill: #999999;
+}
+
+.btn-circle {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0px auto;
+  text-align: center;
+  border: 2px solid #FFFFFF;
+  border-radius: 100%;
+  width: 110px;
+  height: 110px;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+  background-color: transparent;
+}
+
+.btn-circle:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.btn-circle span {
+  padding-top: 3px;
+  padding-left: 3px;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: block;
+  width: 19px;
+  height: 25px;
+}
+
+.btn-lg,
+.btn-group-lg > .btn {
+  font-size: 15px;
+  padding: 10px 40px;
 }
 
 .embed-container {
@@ -11353,72 +11429,6 @@ hr {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-}
-
-.banner-navbar-container {
-  background-color: #333;
-  height: 875px;
-  background-image: url("/img/banner-a.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.banner-container {
-  padding-top: 176px;
-}
-
-.banner-container h1 {
-  color: #FFFFFF;
-  font-size: 48px;
-  font-weight: 600;
-  line-height: 60px;
-  text-align: left;
-}
-
-.banner-container p {
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 28px;
-  text-align: left;
-}
-
-.btn-circle {
-  text-decoration: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0px auto;
-  text-align: center;
-  border: 2px solid #FFFFFF;
-  border-radius: 100%;
-  width: 110px;
-  height: 110px;
-  -webkit-box-pack: center !important;
-      -ms-flex-pack: center !important;
-          justify-content: center !important;
-  background-color: transparent;
-}
-
-.btn-circle:hover {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.btn-circle span {
-  padding-top: 3px;
-  padding-left: 3px;
-  -ms-flex-item-align: center;
-      align-self: center;
-  display: block;
-  width: 19px;
-  height: 25px;
-}
-
-.btn-lg,
-.btn-group-lg > .btn {
-  font-size: 15px;
-  padding: 10px 40px;
 }
 
 .icon-brand svg {
