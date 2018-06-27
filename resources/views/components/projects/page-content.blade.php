@@ -7,7 +7,7 @@
     </div>
     <div class="col-sm-8">
         <div>
-            {!! $project->description !!}
+            {!! $project->description_html !!}
         </div>
     </div>
 </div>

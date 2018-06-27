@@ -23,6 +23,10 @@ class Project extends Model
         'nano_address',
     ];
 
+    public function getDescriptionHtmlAttribute(){
+        return \GrahamCampbell\Markdown\Facades\Markdown::convertToHtml($this->description);
+    }
+
     public function getKey(){
         if(!empty($this->slug)){
             return $this->slug;
