@@ -61,6 +61,9 @@ Route::namespace("Manage")->prefix('/manage')->middleware(['auth','role:admin'])
             Route::get('/edit', 'ProjectController@edit');
             Route::patch('/','ProjectController@update');
             Route::delete('/','ProjectController@destroy');
+            Route::namespace("Payments")->prefix('/payment')->group(function(){
+                Route::get('/', 'PaymentController@index');
+            });
         });
     });
 });

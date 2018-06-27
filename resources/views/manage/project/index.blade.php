@@ -16,6 +16,7 @@
                     <th>Name</th>
                     <th>Goal</th>
                     <th>Address</th>
+                    <th>Payments</th>
                     <th>&nbsp;</th>
                 </tr>
                 </thead>
@@ -25,6 +26,7 @@
                         <td>{{ $project->name }}</td>
                         <td>{{ $project->getNanoCurrent() }}/{{ $project->nano_goal }}</td>
                         <td>{{ $project->nano_address }}</td>
+                        <td><a href="{{ url('/manage/project/'.$project->id.'/payment') }}">{{ $project->successfulPayments->count() }} ({{ $project->payments_total_nano }} ⋰·⋰)</a></td>
                         <td class="text-right">
                             <a href="{{ url($baseRoute.'/'.$project->id.'/edit') }}" class="btn btn-primary">Edit</a>
                         </td>

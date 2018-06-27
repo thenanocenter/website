@@ -54,4 +54,20 @@ class Project extends Model
         $this->save();
     }
 
+    public function payments(){
+        return $this->morphMany(\App\Payment::class,'paymentable');
+    }
+
+    public function successfulPayments(){
+        return $this->payments()->where('success',true);
+    }
+
+    public function getPaymentsTotalNanoAttribute(){
+        $amountRai = 0;
+        foreach($this->successfulPayments as $successfulPayment){
+            $amountRai+=$successfulPayment->amount_rai;
+        }
+        return \NanoUnits::convert('nano','ticker',$amountRai);
+    }
+
 }
