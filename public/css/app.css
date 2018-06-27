@@ -11377,6 +11377,10 @@ main {
   color: #668DFF;
 }
 
+.help-block {
+  font-size: 11px;
+}
+
 img {
   max-width: 100%;
 }

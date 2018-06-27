@@ -15916,7 +15916,10 @@ Vue.component('confirmation-form', __webpack_require__(46));
 Vue.component('notification', __webpack_require__(49));
 Vue.component('project-donation-form', __webpack_require__(52));
 var app = new Vue({
-    el: '#app'
+    el: '#app',
+    data: {
+        submitAsAnonymous: true
+    }
 });
 
 var Flickity = __webpack_require__(55);
