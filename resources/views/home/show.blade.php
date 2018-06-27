@@ -11,7 +11,7 @@
                         <br/>All with a common goal of making cryptocurrency an actual currency.</p>
                 </div>
                 <div class="col-sm-3 text-right py-4">
-                    <a href="#" class="btn btn-light-blue btn-lg">Join the Community</a>
+                    <a href="https://discord.gg/yhBuXMm" target="_blank" class="btn btn-light-blue btn-lg">Join the Community</a>
                 </div>
             </div>
             <hr/>
