@@ -12,6 +12,7 @@
         "binarycabin/laravel-uuid": "^1.0",
         "binarycabin/nano-units": "^1.0",
         "fideloper/proxy": "^4.0",
+        "greggilbert/recaptcha": "^2.2",
         "kilroyweb/options": "^1.0",
         "laravel/framework": "5.6.*",
         "laravel/tinker": "^1.0",

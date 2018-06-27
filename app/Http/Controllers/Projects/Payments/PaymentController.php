@@ -17,6 +17,7 @@ class PaymentController extends Controller
         $this->validate($request,[
             'selected_amount'=>'required',
             'selected_currency'=>'required',
+            'g-recaptcha-response' => 'required|recaptcha',
         ]);
         $paymentData = $request->only([
             'name',
