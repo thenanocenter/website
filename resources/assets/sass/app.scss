@@ -19,6 +19,10 @@
 @import 'partials/project-slider';
 @import 'partials/project-card';
 
+img{
+  max-width:100%;
+}
+
 input[type="file"]{
   display: block;
 }
