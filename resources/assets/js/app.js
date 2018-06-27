@@ -3,6 +3,7 @@ require('./bootstrap');
 window.Vue = require('vue');
 Vue.component('confirmation-form', require('./components/ConfirmationForm.vue'));
 Vue.component('notification', require('./components/Notification.vue'));
+Vue.component('project-donation-form', require('./components/ProjectDonationForm.vue'));
 const app = new Vue({
     el: '#app'
 });

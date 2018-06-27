@@ -14,13 +14,15 @@ class ProjectController extends Controller
         return view('projects.index',['projects'=>$projects]);
     }
 
-    public function show($projectKey)
+    public function show(Request $request, $projectKey)
     {
         $project = \App\Project::findByKey($projectKey);
         if(!$project){
             abort(404);
         }
-        return view('projects.show',['project'=>$project]);
+        return view('projects.show',[
+            'project'=>$project,
+        ]);
     }
 
 }

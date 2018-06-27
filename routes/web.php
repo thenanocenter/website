@@ -14,6 +14,14 @@ Route::namespace('Projects')->prefix('/projects')->group(function(){
     Route::get('/', 'ProjectController@index');
     Route::prefix('/{projectKey}')->group(function(){
         Route::get('/', 'ProjectController@show');
+        Route::namespace('Payments')->prefix('/payment')->group(function(){
+            Route::post('/', 'PaymentController@store');
+            Route::prefix('/{paymentKey}')->group(function(){
+                Route::get('/', 'PaymentController@show');
+                Route::post('/', 'PaymentController@update');
+                Route::patch('/', 'PaymentController@update');
+            });
+        });
     });
 });
 

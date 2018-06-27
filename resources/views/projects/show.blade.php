@@ -1,36 +1,34 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>Projects</h1>
+<h1>{!! $project->name !!}</h1>
 
 <div class="row">
     <div class="col-sm-8">
-        @component('components.panel',['title'=>$project->name])
-            <div class="row">
-                <div class="col-sm-4">
-                    <img class="card-img-left flex-auto d-none d-lg-block" style="max-width: 250px;" alt="{{ $project->name }}" src="{{ asset('storage/'. $project->image_path ) }}">
-                </div>
-                <div class="col-sm-8">
-                    <div class="mb-1 text-muted">{{ $project->getNanoCurrent() }} / {{ $project->nano_goal }} ⋰·⋰</div>
-                    <div>
-                        {!! $project->description !!}
-                    </div>
-                </div>
-            </div>
-        @endcomponent
+        @include('components.projects.page-content',['project'=>$project])
     </div>
     <div class="col-sm-4 position-relative">
-        <h3>Support This Project:</h3>
-        @include('brainblocks::button',[
-                  'destination'=>$project->nano_address,
-                  'amount'=>\NanoUnits::convert('ticker','nano',1),
-                  'action'=>url($project->getPath().'/payment')
-              ])
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Support This Project:</h4>
+            </div>
+            <div class="card-body">
+                {!! Former::open_vertical($project->getPath().'/payment')->method('POST') !!}
+                {!! Former::text('name','')->placeholder('Your Name') !!}
+                {!! Former::email('email','')->placeholder('Email Address') !!}
+                <div class="row">
+                    <div class="col-sm-6">
+                        {!! Former::text('selected_amount','')->placeholder('Amount') !!}
+                    </div>
+                    <div class="col-sm-6">
+                        {!! Former::select('selected_currency','')->options(['nano'=>'Nano','usd'=>'USD']) !!}
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Pay</button>
+                {!! Former::close() !!}
+            </div>
+        </div>
     </div>
 </div>
 
-@endsection
-
-@section('scripts')
-    @include('brainblocks::scripts')
 @endsection
