@@ -75,6 +75,11 @@
           &:before {
               position: absolute;
               display: block;
+              content: 'Goal: ';
+              left: 0;
+              width: 24px;
+              /*position: absolute;
+              display: block;
               content: '';
               left: 0;
               width: 24px;
@@ -84,7 +89,7 @@
               background-position: center;
               background-repeat: no-repeat;
               top: 50%;
-              transform: translateY(-50%);
+              transform: translateY(-50%);*/
           }
         }
 

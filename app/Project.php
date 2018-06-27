@@ -17,6 +17,8 @@ class Project extends Model
         'image_path',
         'description_short',
         'description',
+        'goal',
+        'progress_percentage',
         'nano_goal',
         'nano_address',
     ];

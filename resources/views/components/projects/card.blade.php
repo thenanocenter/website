@@ -6,7 +6,9 @@
         <h3 class="mb-0">
             <a class="text-dark" href="{{ url($project->getPath()) }}">{!! $project->name !!}</a>
         </h3>
-        <div class="mb-1 text-muted">{{ $project->getNanoCurrent() }} / {{ $project->nano_goal }} ⋰·⋰</div>
+        @if(!empty($project->goal))
+            <div class="mb-1 text-muted text-right"><strong>Goal:</strong> {{ $project->goal }} @if(!empty($project->progress_percentage))<em>({{ $project->progress_percentage }}% Funded)</em>@endif</div>
+        @endif
         <p class="card-text mb-auto">
             {!! $project->description_short !!}
         </p>

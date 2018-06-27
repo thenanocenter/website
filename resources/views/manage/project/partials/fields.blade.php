@@ -4,7 +4,14 @@
         {!! Former::text('slug','Slug')->help('For URL: (thenanocenter.org/project/[slug])') !!}
         {!! Former::textarea('description_short','Short Description') !!}
         {!! Former::textarea('description','Description') !!}
-        {!! Former::text('nano_goal','Goal (In NANO)') !!}
+        <div class="row">
+            <div class="col-sm-6">
+                {!! Former::text('goal','Goal')->help('Be sure to add currency ie: $500 USD or 800 Nano') !!}
+            </div>
+            <div class="col-sm-6">
+                {!! Former::select('progress_percentage','Progress')->options(\App\Options\PercentageInteger::get()) !!}
+            </div>
+        </div>
         {!! Former::text('nano_address','Nano Destination Address') !!}
     </div>
     <div class="col-sm-4">

@@ -24,7 +24,7 @@
                 @foreach($projects as $project)
                     <tr>
                         <td>{{ $project->name }}</td>
-                        <td>{{ $project->getNanoCurrent() }}/{{ $project->nano_goal }}</td>
+                        <td>{{ $project->goal }} @if(!empty($project->progress_percentage))({{ $project->progress_percentage }}%)@endif</td>
                         <td>{{ $project->nano_address }}</td>
                         <td><a href="{{ url('/manage/project/'.$project->id.'/payment') }}">{{ $project->successfulPayments->count() }} ({{ $project->payments_total_nano }} ⋰·⋰)</a></td>
                         <td class="text-right">

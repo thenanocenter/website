@@ -11355,17 +11355,21 @@ main {
 .project-card__support__numbers:before {
   position: absolute;
   display: block;
-  content: '';
+  content: 'Goal: ';
   left: 0;
   width: 24px;
-  height: 10px;
-  background-image: url("/img/nano-icon-blue.svg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  /*position: absolute;
+              display: block;
+              content: '';
+              left: 0;
+              width: 24px;
+              height: 10px;
+              background-image: url('/img/nano-icon-blue.svg');
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
+              top: 50%;
+              transform: translateY(-50%);*/
 }
 
 .project-card__support__current,

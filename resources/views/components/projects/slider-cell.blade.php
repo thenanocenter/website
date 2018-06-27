@@ -8,12 +8,16 @@
             </p>
             <div class="project-card__footer">
                 <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: {{ $project->getNanoGoalPercent() }}%" aria-valuenow="{{ $project->getNanoGoalPercent() }}" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar" role="progressbar" style="width: {{ $project->progress_percentage }}%" aria-valuenow="{{ $project->progress_percentage }}" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
                 <div class="project-card__support">
+                    @if(!empty($project->goal))
                     <div class="project-card__support__numbers">
-                        <span class="project-card__support__current">{{ $project->getNanoCurrent() }}</span>/{{ $project->nano_goal }}
+                        <span class="project-card__support__current">
+                            {{ $project->goal }}
+                        </span>
                     </div>
+                    @endif
                     <a href="{{ url($project->getPath()) }}">Support this project</a>
                 </div>
             </div>
