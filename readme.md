@@ -31,6 +31,12 @@ You can add yourself as an administrative user with the command
 php artisan make:admin
 ```
 
+Finally, you can populate your database with fake data by using
+
+```
+php artisan db:seed
+```
+
 ## Assets
 
 ### Fonts
