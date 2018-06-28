@@ -76,4 +76,18 @@ class Project extends Model
         return \NanoUnits::convert('nano','ticker',$amountRai);
     }
 
+    public function getTopContributorNames(){
+        $contributorNames = [];
+        $payments = $this->successfulPayments()->whereNotNull('name')->orderBy('amount_rai','DESC')->limit(10)->get();
+        foreach($payments as $payment){
+            $contributorNames[] = $payment->name;
+        }
+        return $contributorNames;
+    }
+
+    public function getTopContributorsLine(){
+        $contributorNames = $this->getTopContributorNames();
+        return implode(', ',$contributorNames);
+    }
+
 }

@@ -32,7 +32,7 @@
                     @endif
             </div>
         </div>
-
+        @include('components.projects.top-contributors',['project'=>$project])
     </div>
 </div>
 
