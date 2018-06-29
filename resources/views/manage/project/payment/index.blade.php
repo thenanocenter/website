@@ -21,7 +21,7 @@
                 @foreach($payments as $payment)
                     <tr>
                         <td>{{ $payment->created_at->format('m/d/Y g:ia') }}</td>
-                        <td>{{ $payment->name }} &lt;{{ $payment->email }}&gt;</td>
+                        <td>{{ $payment->name }} @if(!empty($payment->email)) &lt;{{ $payment->email }}&gt; @endif</td>
                         <td>{{ \NanoUnits::convert('nano','ticker',$payment->amount_rai) }}</td>
                         <td>
                             <div><small><a href="{{ $payment->getBlockURL() }}" target="_blank">{{ $payment->send_block }}</a></small></div>
