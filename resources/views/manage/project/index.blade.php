@@ -24,7 +24,7 @@
                     <tbody>
                     @foreach($projects as $project)
                         <tr>
-                            <td>{{ $project->name }}</td>
+                            <td><a href="{{ url($project->getPath()) }}" target="_blank">{{ $project->name }}</a></td>
                             <td>{{ $project->status }}</td>
                             <td>{{ $project->goal }} @if(!empty($project->progress_percentage))({{ $project->progress_percentage }}%)@endif</td>
                             <td style="word-wrap: break-word;">{{ $project->nano_address }}</td>
