@@ -10,7 +10,7 @@ class HomeController extends Controller
 
     public function show()
     {
-        $projects = \App\Project::inRandomOrder()->get();
+        $projects = \App\Project::whereIn('status',['active'])->inRandomOrder()->get();
         return view('home.show',['projects'=>$projects]);
     }
 

@@ -1,5 +1,8 @@
 <div class="project-slider__cell">
     <div class="project-card">
+        @if($project->status == 'completed')
+            <span class="badge badge-success">Completed!</span>
+        @endif
         <a href="{{ url($project->getPath()) }}" class="project-card__background" style="background-image: url('{{ asset('storage/'. $project->image_path ) }}');"></a>
         <div class="project-card__content">
             <h4><a href="{{ url($project->getPath()) }}">{!! $project->name !!}</a></h4>
@@ -18,7 +21,13 @@
                         </span>
                     </div>
                     @endif
-                    <a href="{{ url($project->getPath()) }}">Support this project</a>
+                    <a href="{{ url($project->getPath()) }}">
+                        @if($project->status == 'completed')
+                            Read more
+                        @else
+                            Support this project
+                        @endif
+                    </a>
                 </div>
             </div>
         </div>

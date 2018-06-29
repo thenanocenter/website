@@ -3,9 +3,9 @@
 @section('content')
 <h1>Projects</h1>
 
-<div class="projects">
+<div class="d-flex flex-wrap">
     @foreach($projects as $project)
-        @include('components.projects.card',['project' => $project])
+        @include('components.projects.slider-cell',['project' => $project])
     @endforeach
 
 </div>

@@ -2,6 +2,7 @@
     <div class="col-sm-8">
         {!! Former::text('name','Name') !!}
         {!! Former::text('slug','Slug')->help('For URL: (thenanocenter.org/project/[slug])') !!}
+        {!! Former::select('status','Status')->options(\App\Options\ProjectStatus::get()) !!}
         <div class="row">
             <div class="col-sm-6">
                 {!! Former::text('goal','Goal')->help('Be sure to add currency ie: $500 USD or 800 Nano') !!}

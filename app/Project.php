@@ -21,6 +21,7 @@ class Project extends Model
         'progress_percentage',
         'nano_goal',
         'nano_address',
+        'status',
     ];
 
     public function getDescriptionHtmlAttribute(){
