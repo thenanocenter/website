@@ -12,3 +12,9 @@ npm-debug.log
 yarn-error.log
 .env
 .DS_Store
+Vagrantfile
+Key*
+after.sh
+aliases
+id_rsa*
+composer.lock

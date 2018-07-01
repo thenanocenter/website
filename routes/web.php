@@ -25,6 +25,10 @@ Route::namespace('Projects')->prefix('/projects')->group(function(){
     });
 });
 
+Route::namespace('Contact Us')->prefix('/contact')->group(function(){
+    Route::get('/', 'ContactController@index');
+});
+
 Route::get('/nano', function(){
     return view('nano');
 });
