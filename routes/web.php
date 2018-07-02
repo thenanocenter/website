@@ -25,16 +25,14 @@ Route::namespace('Projects')->prefix('/projects')->group(function(){
     });
 });
 
-Route::namespace('Contact Us')->prefix('/contact')->group(function(){
-    Route::get('/', 'ContactController@index');
+Route::namespace('Contact')->prefix('/contact')->group(function(){
+    Route::get('/', 'ContactController@create');
+    Route::post('/', 'ContactController@store');
+    Route::get('/thank-you', 'ContactController@show');
 });
 
 Route::get('/nano', function(){
     return view('nano');
-});
-
-Route::get('/contact', function(){
-    return view('contact');
 });
 
 Route::namespace('Account')->prefix('/account')->middleware('auth')->group(function(){
