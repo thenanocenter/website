@@ -10,3 +10,6 @@
 <li class="nav-item">
     <a class="nav-link" href="{{ url('/nano') }}">What Is Nano</a>
 </li>
+<li class="nav-item">
+    <a class="nav-link" href="{{ url('/contact') }}">Contact Us</a>
+</li>

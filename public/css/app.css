@@ -4224,6 +4224,13 @@ input[type="button"].btn-block {
   margin-left: -1px;
 }
 
+.contact-container {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 25%;
+}
+
 .input-group-prepend {
   margin-right: -1px;
 }
