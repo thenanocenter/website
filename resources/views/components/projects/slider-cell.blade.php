@@ -3,6 +3,9 @@
         @if($project->status == 'completed')
             <span class="badge badge-success">Completed!</span>
         @endif
+            @if($project->status == 'funded')
+                <span class="badge badge-success">Funded!</span>
+            @endif
         <a href="{{ url($project->getPath()) }}" class="project-card__background" style="background-image: url('{{ asset('storage/'. $project->image_path ) }}');"></a>
         <div class="project-card__content">
             <h4><a href="{{ url($project->getPath()) }}">{!! $project->name !!}</a></h4>

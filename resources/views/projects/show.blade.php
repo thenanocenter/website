@@ -11,13 +11,22 @@
         @if($project->status == 'completed')
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">Funding Completed!</h4>
+                    <h4 class="card-title">Project Completed!</h4>
                 </div>
                 <div class="card-body">
                     <p>⋰·⋰ Thanks for your support! ⋰·⋰</p>
                 </div>
             </div>
-        @else
+        @elseif($project->status == 'funded')
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Funding Completed!</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>⋰·⋰ Thanks for your support! ⋰·⋰</p>
+                    </div>
+                </div>
+            @else
             <div class="card">
                 <div class="card-header">
                     <h4 class="card-title">Support This Project:</h4>

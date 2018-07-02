@@ -10,6 +10,7 @@ class ProjectStatus extends BaseOption {
         return [
             'unpublished'=>'Unpublished',
             'active'=>'Active',
+            'funded' =>'Funded',
             'completed' =>'Completed',
         ];
     }
