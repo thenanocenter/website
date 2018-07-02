@@ -10,7 +10,7 @@ class ProjectController extends Controller
 
     public function index()
     {
-        $projects = \App\Project::whereIn('status',['active','completed'])->inRandomOrder()->get();
+        $projects = \App\Project::whereIn('status',['active','funded','completed'])->inRandomOrder()->get();
         return view('projects.index',['projects'=>$projects]);
     }
 
