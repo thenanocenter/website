@@ -8,8 +8,8 @@
         if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
             window.location = "http://appstore.com/nanowalletforios";
         }
-        //Android Version:
-        if(navigator.userAgent.match(/android/i)) {
+//Android Version:
+        else if(navigator.userAgent.match(/android/i)) {
             window.location = "https://play.google.com/store/apps/details?id=co.nano.nanowallet";
         }
 //Desktop Version
@@ -18,7 +18,5 @@
         }
 
     </script>
-    <body>
-    loading...
-    </body>
+    <body>Loading...</body>
 </html>
