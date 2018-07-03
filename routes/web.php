@@ -35,6 +35,10 @@ Route::get('/nano', function(){
     return view('nano');
 });
 
+Route::get('/wallet', function(){
+    return view('wallet');
+});
+
 Route::namespace('Account')->prefix('/account')->middleware('auth')->group(function(){
     Route::namespace('User')->prefix('/user')->group(function(){
         Route::get('/', 'UserController@edit');
