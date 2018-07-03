@@ -1,4 +1,4 @@
-<div class="footer bg-white">
+<div class="footer bg-white py-2 py-md-0">
     <div class="container">
         <div class="container-inner">
             <div class="footer-inner d-flex flex-column flex-md-row justify-content-between align-content-center">
