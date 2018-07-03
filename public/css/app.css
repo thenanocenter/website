@@ -38,6 +38,15 @@
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+@media only screen and (max-width: 600px) {
+    .container-inner:first-of-type {
+      background: #00d6ff14;
+      padding: 10px;
+      margin-bottom: 10px;
+
+    }
+}
+
 *,
 *::before,
 *::after {
