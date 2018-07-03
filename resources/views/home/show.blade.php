@@ -5,9 +5,9 @@
     <div class="rounded pt-1 bg-grey-lightest">
         <div class="container-inner pb-5">
             <div class="row pt-5 pb-3">
-                <div class="col-sm-9">
+                <div class="col-sm-9 text-center text-md-left">
                     <h2>What is NanoCenter?</h2>
-                    <p class="text-grey">The Nano Center is a community of individuals with varying skillsets and competence areas from around the globe.
+                    <p class="text-grey text-left">The Nano Center is a community of individuals with varying skillsets and competence areas from around the globe.
                         <br/>All with a common goal of making cryptocurrency an actual currency.</p>
                 </div>
                 <div class="col-sm-3 text-center text-md-right py-4">
