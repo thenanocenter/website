@@ -10,7 +10,7 @@
                     <p class="text-grey">The Nano Center is a community of individuals with varying skillsets and competence areas from around the globe.
                         <br/>All with a common goal of making cryptocurrency an actual currency.</p>
                 </div>
-                <div class="col-sm-3 text-right py-4">
+                <div class="col-sm-3 text-center text-md-right py-4">
                     <a href="https://discord.gg/yhBuXMm" target="_blank" class="btn btn-light-blue btn-lg">Join the Community</a>
                 </div>
             </div>
