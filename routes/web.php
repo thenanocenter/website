@@ -14,6 +14,7 @@ Route::namespace('Projects')->prefix('/projects')->group(function(){
     Route::get('/', 'ProjectController@index');
     Route::namespace('Proposal')->prefix('/proposal')->group(function() {
         Route::get('/', 'ProposalController@show');
+        Route::post('/', 'ProposalController@store');
     });
     Route::prefix('/{projectKey}')->group(function(){
         Route::get('/', 'ProjectController@show');
