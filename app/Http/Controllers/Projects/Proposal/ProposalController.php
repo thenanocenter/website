@@ -11,9 +11,9 @@ class ProposalController extends Controller
 	protected $modelClass = \App\ProjectProposal::class;
 	protected $baseRoute = 'projects/proposal';
 
-    public function show()
+    public function index()
     {
-        return view('projects.proposal.show');
+        return view('projects.proposal.index');
     }
 
     public function store(Request $request)

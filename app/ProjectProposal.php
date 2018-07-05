@@ -35,6 +35,14 @@ class ProjectProposal extends Model
         return null;
     }
 
+    public static function findByKey($key){
+        $project = static::findByUuid($key);
+        if($project){
+           return $project;
+        }
+        return static::where('uuid',$key)->first();
+    }
+
     public function replaceImage($image){
         $storeResult = $image->store('projects', 'public');
         $this->image_path = $storeResult;

@@ -11,11 +11,7 @@
                     <tr>
                         <th>Title</th>
                         <th>Contact Email</th>
-                        <th>description_short</th>
-                        <th>description</th>
-                        <th>nano_goal</th>
-                        <th>nano_address</th>
-                        <th>links</th>
+                        <th>&nbsp;</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -23,11 +19,11 @@
                         <tr>
                             <td>{{ $proposal->title }}</td>
                             <td>{{ $proposal->email }}</td>
-                            <td>{{ $proposal->description_short }}</td>
-                            <td>{{ $proposal->description }}</td>
-                            <td>{{ $proposal->nano_goal }}</td>
-                            <td>{{ $proposal->nano_address }}</td>
-                            <td>{{ $proposal->links }} </td>
+                            <td class="text-center">
+                                <a href="{{ url($baseRoute.'/'.$proposal->uuid.'/deny') }}"  class="btn btn-danger">Deny</a>
+                                <a href="{{ url($baseRoute.'/'.$proposal->uuid) }}" class="btn btn-info">Review</a>
+                                <a href=href="{{ url($baseRoute.'/'.$proposal->uuid.'/approve') }}"  class="btn btn-primary">Approve</a>
+                            </td>
                         </tr>
                     @endforeach
                     </tbody>

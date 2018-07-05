@@ -23,7 +23,7 @@
             <textarea name="description" class="form-control" placeholder="Detailed description *" id="description" required data-validation-required-message="Please enter a detailed description."></textarea>
         </div>
         <div class="form-group">
-            <input name="nano_goal" class="form-control" placeholder="Funding target *" id="nano_goal" required data-validation-required-message="Please enter a detailed description."></input>
+            <input name="nano_goal" type="number" min="1" max="4294967296" class="form-control" placeholder="Funding target *" id="nano_goal" required data-validation-required-message="Please enter a detailed description."></input>
         </div>
         <div class="form-group">
             <input name="nano_address" class="form-control" placeholder="nano_address *" id="funding" required data-validation-required-message="Please enter you Nano donation address."></input>
