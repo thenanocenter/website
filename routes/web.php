@@ -12,6 +12,10 @@ Route::namespace('About')->prefix('/about')->group(function(){
 
 Route::namespace('Projects')->prefix('/projects')->group(function(){
     Route::get('/', 'ProjectController@index');
+    Route::namespace('Proposal')->prefix('/proposal')->group(function() {
+        Route::get('/', 'ProposalController@index');
+        Route::post('/', 'ProposalController@store');
+    });
     Route::prefix('/{projectKey}')->group(function(){
         Route::get('/', 'ProjectController@show');
         Route::namespace('Payments')->prefix('/payment')->group(function(){
@@ -70,6 +74,12 @@ Route::namespace("Manage")->prefix('/manage')->middleware(['auth','role:admin'])
             Route::namespace("Payments")->prefix('/payment')->group(function(){
                 Route::get('/', 'PaymentController@index');
             });
+        });
+    });
+    Route::namespace("Proposals")->prefix('/proposal')->group(function(){
+        Route::get('/', 'ProposalController@index');
+        Route::prefix("/{projectId}")->group(function(){
+            Route::get('/', 'ProposalController@show');
         });
     });
 });
