@@ -17,6 +17,7 @@ class CreateProjectProposalsTable extends Migration
             $table->increments('id');
             $table->string('uuid');
             $table->string('email')->nullable();
+            $table->string('title');
             $table->text('links')->nullable();
             $table->text('description')->nullable();
             $table->text('description_short')->nullable();

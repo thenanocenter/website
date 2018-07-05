@@ -76,4 +76,7 @@ Route::namespace("Manage")->prefix('/manage')->middleware(['auth','role:admin'])
             });
         });
     });
+    Route::namespace("Proposals")->prefix('/proposal')->group(function(){
+        Route::get('/', 'ProposalController@index');
+    });
 });

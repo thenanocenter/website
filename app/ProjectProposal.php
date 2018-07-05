@@ -13,6 +13,7 @@ class ProjectProposal extends Model
         'uuid',
         'email',
         'links',
+        'title',
         'description_short',
         'description',
         'nano_goal',
