@@ -22,7 +22,7 @@
                             <td class="text-center">
                                 <a href="{{ url($baseRoute.'/'.$proposal->uuid.'/deny') }}"  class="btn btn-danger">Deny</a>
                                 <a href="{{ url($baseRoute.'/'.$proposal->uuid) }}" class="btn btn-info">Review</a>
-                                <a href=href="{{ url($baseRoute.'/'.$proposal->uuid.'/approve') }}"  class="btn btn-primary">Approve</a>
+                                <a href="{{ url($baseRoute.'/'.$proposal->uuid.'/approve') }}"  class="btn btn-primary">Approve</a>
                             </td>
                         </tr>
                     @endforeach
