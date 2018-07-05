@@ -43,3 +43,7 @@
 {!! Former::close() !!}
 
 @endsection
+
+@section('scripts')
+    @include('components.recaptcha.scripts')
+@endsection
