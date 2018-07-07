@@ -52,6 +52,15 @@ Add 127.0.0.1     thenanocenter.vm to your hosts file
 
 On osx `sudo nano /etc/hosts` and `sudo killall -HUP mDNSResponder`
 
+Copy .env.example to .env
+
+Edit the following lines to:
+
+`APP_URL=http://thenanocenter.vm`
+
+`DB_HOST=database`
+`DB_DATABASE=homestead`
+
 Run the commands:
 
 `docker run --rm -v $(pwd):/app composer install`
@@ -67,3 +76,9 @@ Run the commands:
 To stop the docker containers, hit 'ctrl + c' run `docker-compose stop`
 
 To start the docker container, run `docker-compose up`
+
+This includes a webpach watch task
+
+To build the assets for productioon run:
+
+`docker-compose exec frontend npm prod`

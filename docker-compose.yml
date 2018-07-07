@@ -22,7 +22,7 @@ services:
     volumes_from:
       - app
     ports:
-      - 8000:80
+      - 80:80
 
   # The Database
   database:
@@ -30,7 +30,7 @@ services:
     volumes:
       - dbdata:/var/lib/mysql
     environment:
-      - "MYSQL_DATABASE=the-nano-center"
+      - "MYSQL_DATABASE=homestead"
       - "MYSQL_USER=homestead"
       - "MYSQL_PASSWORD=secret"
       - "MYSQL_ROOT_PASSWORD=secret"
@@ -46,6 +46,20 @@ services:
     environment:
       PMA_HOST: database
       MYSQL_ROOT_PASSWORD: secret
+
+  # TODO - run webpack in a container
+  frontend:
+    build:
+      context: ./
+      dockerfile: frontend.dockerfile
+    working_dir: /var/www
+    volumes_from:
+      - app
+    # ports:
+    #   - "3000:3000"
+    #   - "3001:3001"
+    # links:
+    #   - web:thenanocenter.vm
 
 volumes:
   dbdata:
