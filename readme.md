@@ -42,3 +42,28 @@ php artisan db:seed
 ### Fonts
 
 Fonts are loaded by typekit, use a local development domain of thenanocenter.vm or localhost These domains are whitelisted.
+
+
+## Docker
+
+Install docker and docker compose
+
+Add 127.0.0.1     thenanocenter.vm to your hosts file
+
+On osx `sudo nano /etc/hosts` and `sudo killall -HUP mDNSResponder`
+
+Run the commands:
+
+`docker run --rm -v $(pwd):/app composer install`
+
+`docker-compose up`
+
+`docker-compose exec app php artisan key:generate`
+
+`docker-compose exec app php artisan storage:link`
+
+`docker-compose exec app php artisan migrate`
+
+To stop the docker containers, hit 'ctrl + c' run `docker-compose stop`
+
+To start the docker container, run `docker-compose up`
