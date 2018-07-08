@@ -63,9 +63,15 @@ Edit the following lines to:
 
 Run the commands:
 
+`cd` to the project directory
+
 `docker run --rm -v $(pwd):/app composer install`
 
 `docker-compose up`
+
+That will take a while the first time it is run. 
+
+When docker-compose containers are up (you will see console logs from app_1, database_1 etc. )... In a new terminal window, run:
 
 `docker-compose exec app php artisan key:generate`
 
@@ -73,14 +79,14 @@ Run the commands:
 
 `docker-compose exec app php artisan migrate`
 
-To stop the docker containers, hit 'ctrl + c' run `docker-compose stop`
+To stop the docker containers, go to the docker-compose window, hit 'ctrl + c' or run `docker-compose stop`
 
 To start the docker container, run `docker-compose up`
 
-This includes a webpach watch task
+This includes a webpack watch task
 
-Before commiting your changes, build the assets for development or productioon by running:
+The watch task outputs developer assets (un-minified)
 
-`docker-compose exec frontend npm dev`
+Before committing your changes you may build the assets for production by running:
 
 `docker-compose exec frontend npm prod`
