@@ -37,6 +37,7 @@ services:
     ports:
         - "33061:3306"
 
+  # Database GUI - for convenience
   phpmyadmin:
     depends_on:
       - database
@@ -47,7 +48,7 @@ services:
       PMA_HOST: database
       MYSQL_ROOT_PASSWORD: secret
 
-  # TODO - run webpack in a container
+  # Node server to run package.json tasks
   frontend:
     build:
       context: ./
@@ -55,11 +56,6 @@ services:
     working_dir: /var/www
     volumes_from:
       - app
-    # ports:
-    #   - "3000:3000"
-    #   - "3001:3001"
-    # links:
-    #   - web:thenanocenter.vm
 
 volumes:
   dbdata:
