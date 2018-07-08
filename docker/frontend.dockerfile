@@ -4,7 +4,7 @@ RUN npm install webpack -g
 
 WORKDIR /var/www
 
-COPY ./frontend.docker-entrypoint.sh /
+COPY ./docker/frontend.docker-entrypoint.sh /
 
 RUN chmod +x /frontend.docker-entrypoint.sh
 
