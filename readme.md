@@ -79,6 +79,8 @@ To start the docker container, run `docker-compose up`
 
 This includes a webpach watch task
 
-To build the assets for productioon run:
+Before commiting your changes, build the assets for development or productioon by running:
+
+`docker-compose exec frontend npm dev`
 
 `docker-compose exec frontend npm prod`

@@ -2,4 +2,4 @@
 
 npm install
 
-npm run hot
+npm run watch
