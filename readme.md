@@ -75,9 +75,15 @@ When docker-compose containers are up (you will see console logs from app_1, dat
 
 `docker-compose exec app php artisan key:generate`
 
+An app key will be generated and saved in .env
+
 `docker-compose exec app php artisan storage:link`
 
 `docker-compose exec app php artisan migrate`
+
+Now access the site at http://thenanocenter.vm or http://localhost
+
+For database import / export use phpmyadmin at http://thenanocenter.vm:8080
 
 To stop the docker containers, go to the docker-compose window, hit 'ctrl + c' or run `docker-compose stop`
 
