@@ -1,0 +1,2 @@
+<a href="{{ url($baseRoute.'/'.$proposal->uuid.'/status/denied') }}"  class="btn btn-danger">Deny</a>
+<a href="{{ url($baseRoute.'/'.$proposal->uuid.'/status/approved') }}"  class="btn btn-primary">Approve</a>

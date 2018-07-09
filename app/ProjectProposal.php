@@ -20,6 +20,7 @@ class ProjectProposal extends Model
         'goal',
         'nano_goal',
         'nano_address',
+        'status',
     ];
 
     public function getDescriptionHtmlAttribute(){

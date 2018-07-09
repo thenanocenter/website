@@ -2,14 +2,11 @@
 
 namespace App\Http\Controllers\Projects\Proposal;
 
-
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class ProposalController extends Controller
 {
-	protected $modelClass = \App\ProjectProposal::class;
-	protected $baseRoute = 'projects/proposal';
 
     public function index()
     {
@@ -26,10 +23,18 @@ class ProposalController extends Controller
             'written_proposal_url'=>'required',
             'g-recaptcha-response' => 'required|recaptcha',
         ]);
-    	$modelClass = $this->modelClass;
-        $model = $modelClass::create($request->all());
+    	$proposalData = $request->only([
+            'title',
+            'email',
+            'description',
+            'goal',
+            'written_proposal_url',
+            'links',
+        ]);
+        $proposalData['status'] = 'pending';
+        $proposal = \App\ProjectProposal::create($proposalData);
         //TODO - Send email to admin
-        return redirect($this->baseRoute)->withSuccess('Your Proposal Has Been Submitted!');
+        return redirect('/projects/proposal')->withSuccess('Your Proposal Has Been Submitted!');
     }
 
 }

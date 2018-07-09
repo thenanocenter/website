@@ -11,18 +11,18 @@
                     <tr>
                         <th>Title</th>
                         <th>Contact Email</th>
+                        <th>Status</th>
                         <th>&nbsp;</th>
                     </tr>
                     </thead>
                     <tbody>
                     @foreach($proposals as $proposal)
                         <tr>
-                            <td>{{ $proposal->title }}</td>
+                            <td><a href="{{ url($baseRoute.'/'.$proposal->uuid) }}">{{ $proposal->title }}</a></td>
                             <td>{{ $proposal->email }}</td>
-                            <td class="text-center">
-                                <a href="{{ url($baseRoute.'/'.$proposal->uuid.'/deny') }}"  class="btn btn-danger">Deny</a>
-                                <a href="{{ url($baseRoute.'/'.$proposal->uuid) }}" class="btn btn-info">Review</a>
-                                <a href="{{ url($baseRoute.'/'.$proposal->uuid.'/approve') }}"  class="btn btn-primary">Approve</a>
+                            <td>{{ $proposal->status }}</td>
+                            <td class="text-right">
+                                @include('manage.proposal.partials.status-actions')
                             </td>
                         </tr>
                     @endforeach
