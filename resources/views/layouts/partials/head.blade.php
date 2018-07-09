@@ -6,4 +6,4 @@
 @include('components.analytics.gtag')
 @include('components.analytics.matomo')
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-<link rel="stylesheet" href="https://use.typekit.net/mac2ouo.css">
+<script src="https://use.typekit.net/mac2ouo.js"></script>

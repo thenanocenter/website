@@ -9,8 +9,8 @@
         <a href="{{ url($project->getPath()) }}" class="project-card__background" style="background-image: url('{{ asset('storage/'. $project->image_path ) }}');"></a>
         <div class="project-card__content">
             <h4><a href="{{ url($project->getPath()) }}">{!! $project->name !!}</a></h4>
-            <p class="card-text mb-auto">
-                {!! $project->description_short !!}
+            <p class="card-text">
+                {!! str_limit($project->description_short, $limit = 80, $end = '...') !!}
             </p>
             <div class="project-card__footer">
                 <div class="progress">

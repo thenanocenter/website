@@ -11205,6 +11205,9 @@ https://flickity.metafizzy.co
   display: flex;
   width: 80%;
   min-width: 80%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 80%;
+          flex: 0 0 80%;
   padding: 0 23px;
 }
 
@@ -11212,6 +11215,9 @@ https://flickity.metafizzy.co
   .project-slider__cell {
     width: 50%;
     min-width: 50%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
   }
 }
 
@@ -11219,6 +11225,9 @@ https://flickity.metafizzy.co
   .project-slider__cell {
     width: 33.333%;
     min-width: 33.333%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.33333%;
+            flex: 0 0 33.33333%;
   }
 }
 
