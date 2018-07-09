@@ -5,7 +5,7 @@
 {!! Former::open_vertical('projects/proposal')->method('POST') !!}
 <div class="col-lg-12">
 	<div style="text-align: center">
-		<p>Instrunctions here</p>
+		<p>Fill out your project details below</p>
 	</div>
     <div class="col-sm-8 offset-sm-2">
         <div class="form-group">
@@ -16,24 +16,11 @@
         </div>
     </div>
     <div class="col-sm-8 offset-sm-2">
-        <div class="form-group">
-            <textarea name="description_short" class="form-control" maxlength="250" placeholder="Short summary (250 char) *" id="description_short" required data-validation-required-message="Please enter a short-summary."></textarea>
-        </div>
-        <div class="form-group">
-            <textarea name="description" class="form-control" placeholder="Detailed description *" id="description" required data-validation-required-message="Please enter a detailed description."></textarea>
-        </div>
-        <div class="form-group">
-            <input name="nano_goal" type="number" min="1" max="4294967296" class="form-control" placeholder="Funding target *" id="nano_goal" required data-validation-required-message="Please enter a detailed description."></input>
-        </div>
-        <div class="form-group">
-            <input name="nano_address" class="form-control" placeholder="nano_address *" id="funding" required data-validation-required-message="Please enter you Nano donation address."></input>
-        </div>
-        <div class="form-group">
-            <textarea name="links" class="form-control" placeholder="Links to project media, projects or presentations" id="links"></textarea>
-        </div>
-    </div>
-    <div class="col-sm-8 offset-sm-2">
-    @include('components.recaptcha.widget')
+        {!! Former::textarea('description','')->placeholder('Project Description*')->rows(10) !!}
+        {!! Former::text('goal','')->placeholder('Estimated Project Goal*')->required()->help('The estimated amount required for this project (Be sure to specify currency - Nano, USD, Euro...)') !!}
+        {!! Former::text('written_proposal_url','')->placeholder('Written Proposal URL*')->required()->help('A link to a well documented proposal. This is required for acceptance. This may be a link to an external PDF or Google Docs file. <a href="#" target="_blank">For an example, click here</a>') !!}
+        {!! Former::textarea('links','')->placeholder('Any additional links to project media, presentations, or guidelines')->help('A link to a well documented proposal. This is required for acceptance. This may be a link to an external PDF or Google Docs file. <a href="#" target="_blank">For an example, click here</a>') !!}
+        @include('components.recaptcha.widget')
     </div>
     <div class="col-sm-8 offset-sm-2">
         <div id="success"></div>

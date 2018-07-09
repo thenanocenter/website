@@ -8,6 +8,9 @@
 <li class="nav-item">
     <a class="nav-link" href="{{ url('/manage/project') }}">Manage Projects</a>
 </li>
+<li class="nav-item">
+    <a class="nav-link" href="{{ url('/manage/proposal') }}">Manage Proposals</a>
+</li>
 @endif
 <li class="nav-item">
     <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">

@@ -16,8 +16,10 @@ class ProjectProposal extends Model
         'title',
         'description_short',
         'description',
+        'written_proposal_url',
+        'goal',
         'nano_goal',
-        'nano_address'
+        'nano_address',
     ];
 
     public function getDescriptionHtmlAttribute(){
