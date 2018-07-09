@@ -3,14 +3,13 @@
 @section('content')
 <h1>{!! $proposal->title !!}</h1>
 <p><a href="{{ $proposal->written_proposal_url }}" class="btn btn-primary" target="_blank">View Written Proposal</a></p>
+<p>
+	{{ nl2br($proposal->description) }}
+</p>
 <hr/>
 <div class="row">
 	<div class="col-sm-2"><strong>Email</strong></div>
 	<div class="col-sm-8">{{$proposal->email}}</div>
-</div>
-<div class="row">
-	<div class="col-sm-2"><strong>Description</strong></div>
-	<div class="col-sm-8">{{$proposal->description}}</div>
 </div>
 <div class="row">
 	<div class="col-sm-2"><strong>Goal</strong></div>
