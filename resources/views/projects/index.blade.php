@@ -1,7 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>Projects</h1>
+    <div class="d-flex justify-content-between">
+        <div>
+            <h1>Projects</h1>
+        </div>
+        <div>
+            <a href="{{ url('/projects/proposal') }}"><small>Propose a project</small></a>
+        </div>
+    </div>
+
 
 <div class="d-flex flex-wrap">
     @foreach($projects as $project)
