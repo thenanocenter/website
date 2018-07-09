@@ -78,8 +78,11 @@ Route::namespace("Manage")->prefix('/manage')->middleware(['auth','role:admin'])
     });
     Route::namespace("Proposals")->prefix('/proposal')->group(function(){
         Route::get('/', 'ProposalController@index');
-        Route::prefix("/{projectId}")->group(function(){
+        Route::prefix("/{proposalId}")->group(function(){
             Route::get('/', 'ProposalController@show');
+            Route::namespace("Status")->prefix('/status')->group(function(){
+                Route::get('/{statusKey}', 'StatusController@update');
+            });
         });
     });
 });
