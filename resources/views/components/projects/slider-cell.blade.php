@@ -10,7 +10,7 @@
         <div class="project-card__content">
             <h4><a href="{{ url($project->getPath()) }}">{!! $project->name !!}</a></h4>
             <p class="card-text">
-                {!! $project->description_short !!}
+                {!! str_limit($project->description_short, $limit = 80, $end = '...') !!}
             </p>
             <div class="project-card__footer">
                 <div class="progress">
