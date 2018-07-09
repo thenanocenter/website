@@ -9,7 +9,7 @@
         <a href="{{ url($project->getPath()) }}" class="project-card__background" style="background-image: url('{{ asset('storage/'. $project->image_path ) }}');"></a>
         <div class="project-card__content">
             <h4><a href="{{ url($project->getPath()) }}">{!! $project->name !!}</a></h4>
-            <p class="card-text mb-auto">
+            <p class="card-text">
                 {!! $project->description_short !!}
             </p>
             <div class="project-card__footer">

@@ -1,4 +1,5 @@
 require('./bootstrap');
+var Flickity = require('flickity');
 
 window.Vue = require('vue');
 Vue.component('confirmation-form', require('./components/ConfirmationForm.vue'));
@@ -11,17 +12,29 @@ const app = new Vue({
     }
 });
 
-var Flickity = require('flickity');
-var flickityElement = document.querySelector('.project-slider__wrap');
-if(flickityElement !== null){
-    var flickityInstance = new Flickity(flickityElement, {
+
+
+try {
+  Typekit.load({
+    loading: function () {
+      // JavaScript to execute when fonts start loading
+    },
+    active: function () {
+      // JavaScript to execute when fonts become active
+      var flkty = new Flickity('.project-slider__wrap', {
         cellAlign: 'left',
         contain: true,
         pageDots: false,
         arrowShape: '',
         groupCells: true
-    });
-}
+      });
+    },
+    inactive: function () {
+      // JavaScript to execute when fonts become inactive
+    }
+  })
+} catch (e) { }
+
 
 $( document ).ready(function() {
     //Embed Video Modals

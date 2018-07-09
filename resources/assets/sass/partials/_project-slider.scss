@@ -29,13 +29,16 @@
         display: flex;
         width: 80%;
         min-width: 80%;
+        flex: 0 0 80%;
         @include media-breakpoint-up(md) {
             width: 50%;
             min-width: 50%;
+            flex: 0 0 50%;
         }
         @include media-breakpoint-up(lg) {
             width: 33.333%;
             min-width: 33.333%;
+            flex: 0 0 33.33333%;
         }
         padding: 0 23px;
     }

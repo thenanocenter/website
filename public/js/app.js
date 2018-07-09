@@ -15910,6 +15910,7 @@ module.exports = __webpack_require__(67);
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(20);
+var Flickity = __webpack_require__(55);
 
 window.Vue = __webpack_require__(43);
 Vue.component('confirmation-form', __webpack_require__(46));
@@ -15922,17 +15923,26 @@ var app = new Vue({
     }
 });
 
-var Flickity = __webpack_require__(55);
-var flickityElement = document.querySelector('.project-slider__wrap');
-if (flickityElement !== null) {
-    var flickityInstance = new Flickity(flickityElement, {
-        cellAlign: 'left',
-        contain: true,
-        pageDots: false,
-        arrowShape: '',
-        groupCells: true
+try {
+    Typekit.load({
+        loading: function loading() {
+            // JavaScript to execute when fonts start loading
+        },
+        active: function active() {
+            // JavaScript to execute when fonts become active
+            var flkty = new Flickity('.project-slider__wrap', {
+                cellAlign: 'left',
+                contain: true,
+                pageDots: false,
+                arrowShape: '',
+                groupCells: true
+            });
+        },
+        inactive: function inactive() {
+            // JavaScript to execute when fonts become inactive
+        }
     });
-}
+} catch (e) {}
 
 $(document).ready(function () {
     //Embed Video Modals
