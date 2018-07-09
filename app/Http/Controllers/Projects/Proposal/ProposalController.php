@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Projects\Proposal;
 
 use App\Http\Controllers\Controller;
+use App\Mail\ProjectProposalCreated;
 use Illuminate\Http\Request;
 
 class ProposalController extends Controller
@@ -33,7 +34,7 @@ class ProposalController extends Controller
         ]);
         $proposalData['status'] = 'pending';
         $proposal = \App\ProjectProposal::create($proposalData);
-        //TODO - Send email to admin
+        \Mail::send(new ProjectProposalCreated($proposal));
         return redirect('/projects/proposal')->withSuccess('Your Proposal Has Been Submitted!');
     }
 
