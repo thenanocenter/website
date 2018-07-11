@@ -27,34 +27,36 @@
                     </div>
                 </div>
             @else
-            <div class="card">
-                <div class="card-header">
-                    <h4 class="card-title">Support This Project:</h4>
-                </div>
-                <div class="card-body">
-                    {!! Former::open_vertical($project->getPath().'/payment')->method('POST') !!}
-                    <div class="form-group">
-                        <label>
-                            <input type="checkbox" v-model="submitAsAnonymous"/> Donate Anonymously
-                        </label>
+            @if(!empty($project->nano_address))
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Support This Project:</h4>
                     </div>
-                    <div v-if="!submitAsAnonymous">
-                        {!! Former::text('name','')->placeholder('Your Name') !!}
-                        {!! Former::email('email','')->placeholder('Email Address (Optional)')->help('Your email will only be visible by project administrators') !!}
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            {!! Former::text('selected_amount','')->placeholder('Amount') !!}
+                    <div class="card-body">
+                        {!! Former::open_vertical($project->getPath().'/payment')->method('POST') !!}
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" v-model="submitAsAnonymous"/> Donate Anonymously
+                            </label>
                         </div>
-                        <div class="col-sm-6">
-                            {!! Former::select('selected_currency','')->options(['nano'=>'Nano','usd'=>'USD']) !!}
+                        <div v-if="!submitAsAnonymous">
+                            {!! Former::text('name','')->placeholder('Your Name') !!}
+                            {!! Former::email('email','')->placeholder('Email Address (Optional)')->help('Your email will only be visible by project administrators') !!}
                         </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                {!! Former::text('selected_amount','')->placeholder('Amount') !!}
+                            </div>
+                            <div class="col-sm-6">
+                                {!! Former::select('selected_currency','')->options(['nano'=>'Nano','usd'=>'USD']) !!}
+                            </div>
+                        </div>
+                        @include('components.recaptcha.widget')
+                        <button type="submit" class="btn btn-primary">Pay</button>
+                        {!! Former::close() !!}
                     </div>
-                    @include('components.recaptcha.widget')
-                    <button type="submit" class="btn btn-primary">Pay</button>
-                    {!! Former::close() !!}
                 </div>
-            </div>
+            @endif
         @endif
         @include('components.projects.top-contributors',['project'=>$project])
     </div>
