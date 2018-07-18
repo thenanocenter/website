@@ -11478,3 +11478,16 @@ hr {
   fill: #3054F4;
 }
 
+.list-item-container {
+  margin: 0px;
+  padding: 0px;
+}
+
+.list-item-container > li {
+  background-color: #FFF;
+  border-left: solid 5px #3367ff;
+  list-style-type: none;
+  padding: 8px;
+  margin: 0px 0px 10px 0px;
+}
+
