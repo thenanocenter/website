@@ -19,7 +19,7 @@
             <div id="success"></div>
             <button type="submit" class="btn btn-light-blue btn-lg">Submit Project Proposal</button>
     </div>
-    <div class="col-sm-4" style="padding-top:50px;">
+    <div class="col-sm-4" style="padding-top:15px;">
         <h3>Project Guidelines</h3>
         <p><small><strong>Please review all below before submitting!</strong></small></p>
         <ul class="list-item-container">
