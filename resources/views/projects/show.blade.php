@@ -56,6 +56,8 @@
                         {!! Former::close() !!}
                     </div>
                 </div>
+            @else
+                <p class="text-center">Donations currently not open</p>
             @endif
         @endif
         @include('components.projects.top-contributors',['project'=>$project])
