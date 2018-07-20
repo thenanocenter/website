@@ -51,7 +51,9 @@
                                 {!! Former::select('selected_currency','')->options(['nano'=>'Nano','usd'=>'USD']) !!}
                             </div>
                         </div>
-                        <?php// @include('components.recaptcha.widget') ?>
+                        <?php
+                        // @include('components.recaptcha.widget')
+                        ?>
                         <button type="submit" class="btn btn-primary">Pay</button>
                         {!! Former::close() !!}
                     </div>
