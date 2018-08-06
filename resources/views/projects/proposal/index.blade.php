@@ -15,7 +15,7 @@
             {!! Former::text('goal','')->placeholder('Estimated Project Goal*')->required()->help('The estimated amount required for this project (Be sure to specify currency - Nano, USD, Euro...)') !!}
             {!! Former::text('written_proposal_url','')->placeholder('Written Proposal URL*')->required()->help('A link to a well documented proposal. This is required for acceptance. This may be a link to an external PDF or Google Docs file. <a href="https://docs.google.com/document/d/1qfywO6s5wFLOuUDRIgmtsWbuoAnCkgmXcGWTyH8UAww" target="_blank">For an example, click here</a>') !!}
             {!! Former::textarea('links','')->placeholder('Any additional links to project media, presentations, or guidelines') !!}
-            @include('components.recaptcha.widget')
+<?php /*@include('components.recaptcha.widget')*/ ?>
             <div id="success"></div>
             <button type="submit" class="btn btn-light-blue btn-lg">Submit Project Proposal</button>
     </div>
@@ -38,5 +38,5 @@
 @endsection
 
 @section('scripts')
-    @include('components.recaptcha.scripts')
+    <?php /*@include('components.recaptcha.scripts')*/ ?>
 @endsection
