@@ -22,7 +22,7 @@ class ProposalController extends Controller
             'description'=>'required',
             'goal'=>'required',
             'written_proposal_url'=>'required',
-            'g-recaptcha-response' => 'required|recaptcha',
+           // 'g-recaptcha-response' => 'required|recaptcha',
         ]);
     	$proposalData = $request->only([
             'title',
