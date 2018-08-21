@@ -6,6 +6,14 @@
     <div class="row">
         <div class="col-sm-4">
             @include('components.nano.card',[
+            'imageURL'=>'https://cdn-images-1.medium.com/max/1200/1*sXkMfBeO5G2Z1-watgDvXw.png',
+            'url'=>'https://medium.com/@thenanocenter/the-easiest-ways-to-buy-nano-5602a3949da8',
+            'title'=>'The Easiest Way To Buy Nano',
+            'author'=>'NanoThings'
+            ])
+        </div>
+        <div class="col-sm-4">
+            @include('components.nano.card',[
             'imageURL'=>'https://i0.wp.com/lvena26b6e621o8sl2qkx1ql-wpengine.netdna-ssl.com/wp-content/uploads/2017/12/blocklattice-1.png?resize=389%2C432&ssl=1',
             'url'=>'https://nanothings.store/what-is-nano/',
             'title'=>'What is Nano?',
@@ -20,6 +28,8 @@
             'author'=>'NanoThings'
             ])
         </div>
+    </div>
+    <div class="row">
         <div class="col-sm-4">
             @include('components.nano.card',[
             'imageURL'=>'https://i2.wp.com/nanothings.store/wp-content/uploads/2018/03/nlTsLKPh.jpg?w=1024&ssl=1',
@@ -29,5 +39,6 @@
             ])
         </div>
     </div>
+
 
 @endsection
