@@ -19,4 +19,25 @@ class ArticleController extends BaseManageController
     protected $viewEdit='manage.article.edit';
     protected $viewFields;
 
+    public function store(Request $request){
+        $modelClass = $this->modelClass;
+        $model = $modelClass::create($request->all());
+        if($request->hasFile('image_file')){
+            $model->addMedia($request->file('image_file'))
+                ->toMediaCollection('featured');
+        }
+        return redirect($this->baseRoute)->withSuccess('Saved!');
+    }
+
+    public function update(Request $request, $modelId){
+        $modelClass = $this->modelClass;
+        $model = $modelClass::where('id',$modelId)->first();
+        $model->update($request->all());
+        if($request->hasFile('image_file')){
+            $model->addMedia($request->file('image_file'))
+                ->toMediaCollection('featured');
+        }
+        return redirect($this->redirectAfterUpdate($model))->withSuccess('Saved!');
+    }
+
 }

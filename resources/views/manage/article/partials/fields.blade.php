@@ -7,8 +7,8 @@
         {!! Former::textarea('body','Body') !!}
     </div>
     <div class="col-sm-4">
-        @if(!empty($article) && !empty($article->image_path))
-            <div class="mb-2"><img src="{{ asset('storage/'. $project->image_path ) }}" class="img-fluid" /></div>
+        @if(!empty($article) && !empty($article->getFirstMediaUrl('featured')))
+            <div class="mb-2"><img src="{{ $article->getFirstMediaUrl('featured') }}" class="img-fluid" /></div>
         @endif
         {!! Former::file('image_file','Thumbnail Image') !!}
     </div>
