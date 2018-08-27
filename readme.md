@@ -49,10 +49,10 @@ php artisan db:seed
 
 Webpack (Using [Laravel Mix](https://laravel.com/docs/5.6/mix)) is used for compiling CSS, JS, and Images:
 
-**CSS** is generated via Sass, be careful not to directly edit /public/css/app.css as your work will likely be overwritten the next time the file is generated. 
+**CSS** is generated via Sass, **be careful not to directly edit /public/css/app.css as your work will likely be overwritten** the next time the file is generated. 
 Instead, edit /resources/sass/app.scss and use the npm script below to generate the updated public assets
 
-**Javascript** is also compiled using NPM, be sure to edit javascript code in /resources/js/app.js, and not in the public directory
+**Javascript** is also compiled using NPM, **be sure to edit javascript code in /resources/js/app.js, and not in the public directory**
 
 **Images** should also be added to /resources/img, and not the public directory as they will be copied during the NPM script
 
