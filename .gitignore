@@ -18,3 +18,4 @@ after.sh
 aliases
 id_rsa*
 composer.lock
+composer.phar
