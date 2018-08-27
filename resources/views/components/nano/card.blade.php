@@ -1,5 +1,5 @@
-<div class="card nano-card">
-    <a href="{{ $url }}" target="_blank" class="image-container">
+<div class="card nano-card my-3 image-mask">
+    <a href="{{ $url }}" target="_blank" class="image-container image-mask-visible">
         <img class="card-img-top" src="{{ $imageURL }}" alt="{{ $title }}" />
     </a>
     <div class="card-body">

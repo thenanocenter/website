@@ -11203,11 +11203,11 @@ https://flickity.metafizzy.co
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 80%;
-  min-width: 80%;
+  width: 100%;
+  min-width: 100%;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 80%;
-          flex: 0 0 80%;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
   padding: 0 23px;
 }
 
@@ -11397,6 +11397,36 @@ main {
 .project-card__support__current,
 .project-card__support a {
   color: #668DFF;
+}
+
+.nano-card.image-mask {
+  overflow: hidden;
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+.nano-card:hover .card-title a {
+  color: #3054F4;
+}
+
+.nano-card .image-mask-visible {
+  height: 400px !important;
+  height: auto;
+  visibility: visible;
+  display: block;
+}
+
+.nano-card .card-body {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 0 20px 10px 20px;
+  margin-bottom: 0;
+  background: #fff;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.8)));
+  background: linear-gradient(transparent, rgba(255, 255, 255, 0.8));
+  padding-bottom: 10px;
 }
 
 .help-block {

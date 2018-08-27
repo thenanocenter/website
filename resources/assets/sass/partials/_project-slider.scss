@@ -5,18 +5,18 @@
     margin-bottom: 40px;
 
     &__wrap {
-      
+
           display: flex;
           align-items: stretch;
           padding-top: rem(10);
           padding-bottom: rem(10);
           opacity: 0;
           margin: 0 -23px;
-      
+
           &.flickity-enabled {
-      
+
             opacity: 1;
-      
+
             .project-slider__cell {
                 min-height: 100%;
                 align-self: stretch;
@@ -27,9 +27,9 @@
 
     &__cell {
         display: flex;
-        width: 80%;
-        min-width: 80%;
-        flex: 0 0 80%;
+        width: 100%;
+        min-width: 100%;
+        flex: 0 0 100%;
         @include media-breakpoint-up(md) {
             width: 50%;
             min-width: 50%;

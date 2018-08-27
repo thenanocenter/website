@@ -1,0 +1,30 @@
+.nano-card.image-mask {
+  overflow: hidden;
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+.nano-card:hover .card-title a {
+  color: #3054F4;
+}
+
+.nano-card {
+  .image-mask-visible {
+    height: 400px !important;
+    height: auto;
+    visibility: visible;
+    display: block;
+  }
+
+  .card-body {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 0 20px 10px 20px;
+    margin-bottom: 0;
+    background: #fff;
+    background: -webkit-linear-gradient(transparent, rgba(255, 255, 255, .8));
+    background: linear-gradient(transparent, rgba(255, 255, 255, .8));
+  }
+}
