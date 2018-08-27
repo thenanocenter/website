@@ -29,6 +29,13 @@ Route::namespace('Projects')->prefix('/projects')->group(function(){
     });
 });
 
+Route::namespace('Articles')->prefix('/articles')->group(function(){
+    //Route::get('/', 'ArticleController@index');
+    Route::prefix('/{articleKey}')->group(function(){
+        Route::get('/', 'ArticleController@show');
+    });
+});
+
 Route::namespace('Contact')->prefix('/contact')->group(function(){
     Route::get('/', 'ContactController@create');
     Route::post('/', 'ContactController@store');
@@ -84,6 +91,17 @@ Route::namespace("Manage")->prefix('/manage')->middleware(['auth','role:admin'])
             Route::namespace("Status")->prefix('/status')->group(function(){
                 Route::get('/{statusKey}', 'StatusController@update');
             });
+        });
+    });
+    Route::namespace("Articles")->prefix('/article')->group(function(){
+        Route::get('/', 'ArticleController@index');
+        Route::get('/create', 'ArticleController@create');
+        Route::post('/', 'ArticleController@store');
+        Route::prefix("/{articleId}")->group(function(){
+            Route::get('/', 'ArticleController@show');
+            Route::get('/edit', 'ArticleController@edit');
+            Route::patch('/','ArticleController@update');
+            Route::delete('/','ArticleController@destroy');
         });
     });
 });

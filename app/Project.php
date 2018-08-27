@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Support\Traits\HasSlug;
 use BinaryCabin\LaravelUUID\Traits\HasUUID;
 use Illuminate\Database\Eloquent\Model;
 
@@ -9,6 +10,7 @@ class Project extends Model
 {
 
     use HasUUID;
+    use HasSlug;
 
     protected $fillable = [
         'uuid',
@@ -28,13 +30,6 @@ class Project extends Model
         return \GrahamCampbell\Markdown\Facades\Markdown::convertToHtml($this->description);
     }
 
-    public function getKey(){
-        if(!empty($this->slug)){
-            return $this->slug;
-        }
-        return $this->uuid;
-    }
-
     public function getPath(){
         return '/projects/'.$this->getKey();
     }
@@ -45,14 +40,6 @@ class Project extends Model
 
     public function getNanoGoalPercent(){
         return intval($this->getNanoCurrent() / $this->nano_goal);
-    }
-
-    public static function findByKey($key){
-        $project = static::findByUuid($key);
-        if($project){
-           return $project;
-        }
-        return static::where('slug',$key)->first();
     }
 
     public function replaceImage($image){
