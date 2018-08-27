@@ -24,4 +24,8 @@
 	<p><strong>Status: </strong> {{ $proposal->status }}</p>
 	@include('manage.proposal.partials.status-actions')
 </div>
+	<hr/>
+	<div class="text-right" style="margin-top:100px;">
+		@include('components.delete-button',['url'=>'/manage/proposal/'.$proposal->id])
+	</div>
 @endsection

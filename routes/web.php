@@ -80,6 +80,7 @@ Route::namespace("Manage")->prefix('/manage')->middleware(['auth','role:admin'])
         Route::get('/', 'ProposalController@index');
         Route::prefix("/{proposalId}")->group(function(){
             Route::get('/', 'ProposalController@show');
+            Route::delete('/','ProposalController@destroy');
             Route::namespace("Status")->prefix('/status')->group(function(){
                 Route::get('/{statusKey}', 'StatusController@update');
             });
