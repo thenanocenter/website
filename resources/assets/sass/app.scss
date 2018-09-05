@@ -10,6 +10,10 @@
 // Plugins
 @import 'partials/flickity';
 
+// Fonts
+$fa-font-path: "~fork-awesome/fonts";
+@import "../../../node_modules/fork-awesome/scss/fork-awesome";
+
 // Partials
 @import 'partials/navbar';
 @import 'partials/banner';

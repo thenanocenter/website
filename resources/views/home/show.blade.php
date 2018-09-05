@@ -11,7 +11,10 @@
                         <br/>All with a common goal of making cryptocurrency an actual currency.</p>
                 </div>
                 <div class="col-sm-3 text-center text-md-right py-4">
-                    <a href="https://discord.gg/yhBuXMm" target="_blank" class="btn btn-light-blue btn-lg">Join the Community</a>
+                    <a href="http://discord.nanocenter.org" target="_blank" class="btn btn-light-blue btn-lg d-flex justify-content-center">
+                        <i class="fa fa-discord-alt fa-2x" aria-hidden="true"></i>
+                        <div class="align-self-center pl-3">Join the Community</div>
+                    </a>
                 </div>
             </div>
             <hr/>
