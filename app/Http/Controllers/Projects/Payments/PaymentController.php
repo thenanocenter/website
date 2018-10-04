@@ -53,6 +53,8 @@ class PaymentController extends Controller
         if(!$project){
             abort(404);
         }
+        //TODO - temporary fix around BB validation delay
+        return redirect($project->getPath())->withSuccess('Thank you for your payment!!');
         $payment = \App\Payment::findByUuid($paymentKey);
         if(!$payment){
             abort(404);
